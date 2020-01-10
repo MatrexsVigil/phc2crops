@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "pamhc2crops:block/spiceleaf_stage_1"
+    }
+}
+

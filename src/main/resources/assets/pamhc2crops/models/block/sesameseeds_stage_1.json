@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "pamhc2crops:block/sesameseeds_stage_1"
+    }
+}
+

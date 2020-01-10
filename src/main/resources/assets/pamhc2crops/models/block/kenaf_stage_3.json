@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "pamhc2crops:block/kenaf_stage_3"
+    }
+}

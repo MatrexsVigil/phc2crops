@@ -1,17 +1,18 @@
 package pam.pamhc2crops.items;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
+import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 
-public class ItemPamGrain extends Item {
-	public ItemPamGrain(Properties properties) {
-		super(properties);
+public class ItemPamGrain extends BlockNamedItem {
+	public ItemPamGrain(Block blockIn, Properties properties) {
+		super(blockIn, properties);
 
 	}
 

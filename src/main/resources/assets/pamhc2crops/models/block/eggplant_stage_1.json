@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "pamhc2crops:block/eggplant_stage_1"
+    }
+}

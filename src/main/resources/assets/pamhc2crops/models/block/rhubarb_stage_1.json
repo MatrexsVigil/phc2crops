@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "pamhc2crops:block/rhubarb_stage_1"
+    }
+}
+

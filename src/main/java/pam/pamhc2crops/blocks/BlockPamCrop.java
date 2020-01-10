@@ -30,9 +30,9 @@ public class BlockPamCrop extends CropsBlock {
 	protected IItemProvider getSeedsItem() {
 		switch (name) {
 		case "barley":
-			return ItemRegistry.barleyseeditem;	
+			return ItemRegistry.barleyitem;	
 		case "tomato":
-			return ItemRegistry.tomatoseeditem;
+			return ItemRegistry.tomatoitem;
 		default:
 			return Items.WHEAT_SEEDS;
 		}

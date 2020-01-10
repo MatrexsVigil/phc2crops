@@ -1,16 +1,17 @@
 package pam.pamhc2crops.items;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
+import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 
-public class ItemPamPig extends Item {
-	public ItemPamPig(Properties properties) {
-		super(properties);
+public class ItemPamPig extends BlockNamedItem {
+	public ItemPamPig(Block blockIn, Properties properties) {
+		super(blockIn, properties);
 
 	}
 

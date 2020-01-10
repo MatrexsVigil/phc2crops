@@ -1,9 +1,16 @@
 {
 	"itemGroup.pamhc2crops": "Pam's HarvestCraft 2 - Crops",
+
+	"block.pamhc2crops.barley_crop": "Barley Crop",
 	"block.pamhc2crops.tomato_crop": "Tomato Crop",
-	"item.pamhc2crops.tomatoseeditem": "Tomato Seed",
-	"item.pamhc2crops.tomatoitem": "Tomato",
-	"block.pamhc2crops.barley_crop": "barley Crop",
-	"item.pamhc2crops.barleyseeditem": "Barley Seed",
+	
+
 	"item.pamhc2crops.barleyitem": "Barley"
+	"item.pamhc2crops.tomatoitem": "Tomato",
+	
+	
+	
+
+	"item.pamhc2crops.barleyseeditem": "Barley Seed",
+	"item.pamhc2crops.tomatoseeditem": "Tomato Seed",	
 }
