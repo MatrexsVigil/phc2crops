@@ -7,14 +7,24 @@ import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.ParrotEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockNamedItem;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
+import net.minecraft.util.NonNullList;
 
 public class ItemPamSeed extends BlockNamedItem {
 
 	public ItemPamSeed(Block blockIn, Properties properties) {
 		super(blockIn, properties);
 	}
+	
+	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+	      if (this.isInGroup(group)) {
+	         items.add(new ItemStack(this));
+	      }
+
+	   }
+	
 
 	public boolean itemInteractionForEntity(ItemStack itemstack, PlayerEntity player,
 			LivingEntity entity, Hand hand) {

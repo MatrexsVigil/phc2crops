@@ -12,13 +12,25 @@ public class Config {
 	public static final ForgeConfigSpec CONFIG;
 
 	static {
+		
+		BUILDER.push("Tweak World Generation Rates");
+		ChanceConfig.init(BUILDER);
+		BUILDER.pop();
 
 		BUILDER.push("Miscellaneous Features");
 		FeatureConfig.init(BUILDER);
 		BUILDER.pop();
 		
+		BUILDER.push("Enable/Disable Garden World Generation");
+		EnableConfig.init(BUILDER);
+		BUILDER.pop();
+		
 		BUILDER.push("Right-click Harvesting Settings");
 		RightClickConfig.init(BUILDER);
+		BUILDER.pop();
+		
+		BUILDER.push("Dimensions Settings");
+		DimensionConfig.init(BUILDER);
 		BUILDER.pop();
 
 		CONFIG = BUILDER.build();

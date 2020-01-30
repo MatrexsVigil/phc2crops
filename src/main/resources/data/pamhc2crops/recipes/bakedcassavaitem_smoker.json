@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:smoking",
+	"ingredient": {"tag": "forge:crops/cassava"},
+	"result": "pamhc2crops:bakedcassavaitem",
+	"experience": 0.35,
+	"cookingtime": 100
+
+}

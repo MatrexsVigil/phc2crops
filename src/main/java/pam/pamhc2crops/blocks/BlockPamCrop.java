@@ -4,16 +4,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropsBlock;
 import net.minecraft.block.FarmlandBlock;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.IItemProvider;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
-import pam.pamhc2crops.init.ItemRegistry;
 
 public class BlockPamCrop extends CropsBlock {
+	@SuppressWarnings("unused")
 	private String name;
 	public static final IntegerProperty AGE = BlockStateProperties.AGE_0_7;
 
@@ -27,26 +27,12 @@ public class BlockPamCrop extends CropsBlock {
 		return state.getBlock() instanceof FarmlandBlock;
 	}
 
-	protected IItemProvider getSeedsItem() {
-		switch (name) {
-		case "barley":
-			return ItemRegistry.barleyitem;	
-		case "tomato":
-			return ItemRegistry.tomatoitem;
-		default:
-			return Items.WHEAT_SEEDS;
-		}
-	}
 
-	public ItemStack getItem(IBlockReader worldIn, BlockPos pos, BlockState state) {
-		switch (name) {
-		case "barley":
-			return new ItemStack(ItemRegistry.barleyitem);
-		case "tomato":
-			return new ItemStack(ItemRegistry.tomatoitem);
-		default:
-			return new ItemStack(Items.WHEAT);
-		}
-	}
+	
+	@Override
+	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+	      items.add(new ItemStack(this));
+	   }
+
 
 }

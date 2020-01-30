@@ -6,8 +6,10 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockNamedItem;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
+import net.minecraft.util.NonNullList;
 
 public class ItemPamPig extends BlockNamedItem {
 	public ItemPamPig(Block blockIn, Properties properties) {
@@ -15,6 +17,13 @@ public class ItemPamPig extends BlockNamedItem {
 
 	}
 
+	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+	      if (this.isInGroup(group)) {
+	         items.add(new ItemStack(this));
+	      }
+
+	   }
+	
 	public boolean itemInteractionForEntity(ItemStack itemstack, PlayerEntity player,
 			LivingEntity entity, Hand hand) {
 

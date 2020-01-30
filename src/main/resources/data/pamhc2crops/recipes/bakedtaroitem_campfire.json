@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:campfire_cooking",
+	"ingredient": {"tag": "forge:crops/taro"},
+	"result": "pamhc2crops:bakedtaroitem",
+	"experience": 0.35,
+	"cookingtime": 600
+
+}

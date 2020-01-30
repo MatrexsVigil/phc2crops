@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:campfire_cooking",
+	"ingredient": {"tag": "forge:mushrooms"},
+	"result": "pamhc2crops:roastedmushroomitem",
+	"experience": 0.35,
+	"cookingtime": 600
+
+}

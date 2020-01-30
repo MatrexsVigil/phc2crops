@@ -7,14 +7,23 @@ import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockNamedItem;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
+import net.minecraft.util.NonNullList;
 
 public class ItemPamGrain extends BlockNamedItem {
 	public ItemPamGrain(Block blockIn, Properties properties) {
 		super(blockIn, properties);
 
 	}
+	
+	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+	      if (this.isInGroup(group)) {
+	         items.add(new ItemStack(this));
+	      }
+
+	   }
 
 	public boolean itemInteractionForEntity(ItemStack itemstack, PlayerEntity player,
 			LivingEntity entity, Hand hand) {

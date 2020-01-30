@@ -1,0 +1,24 @@
+{
+	"replace": false,
+	"values": [
+		"#forge:fruits/blackberry",
+		"#forge:fruits/blueberry",
+		"#forge:fruits/cactusfruit",
+		"#forge:fruits/candleberry",
+		"#forge:fruits/cantaloupe",
+		"#forge:fruits/cranberry",
+		"#forge:fruits/elderberry",
+		"#forge:fruits/grape",
+		"#forge:fruits/greengrape",
+		"#forge:fruits/huckleberry",
+		"#forge:fruits/juniperberry",
+		"#forge:fruits/kiwi",
+		"#forge:fruits/melon",
+		"#forge:fruits/mulberry",
+		"#forge:fruits/pineapple",
+		"#forge:fruits/raspberry",
+		"#forge:fruits/strawberry",
+		"#forge:fruits/sweet_berries"
+
+	]
+}

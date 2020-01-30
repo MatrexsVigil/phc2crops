@@ -11,7 +11,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import pam.pamhc2crops.Pamhc2crops;
+import pam.pamhc2crops.blocks.BlockPamAridGarden;
 import pam.pamhc2crops.blocks.BlockPamCrop;
+import pam.pamhc2crops.blocks.BlockPamGarden;
 
 public class BlockRegistry {
 
@@ -24,7 +26,7 @@ public class BlockRegistry {
 	public static Block pambeancrop;
 	public static Block pambellpeppercrop;
 	public static Block pamblackberrycrop;
-	public static Block pamblueberrycrop;;
+	public static Block pamblueberrycrop;
 	public static Block pambroccolicrop;
 	public static Block pambrusselsproutcrop;
 	public static Block pamcabbagecrop;
@@ -41,7 +43,6 @@ public class BlockRegistry {
 	public static Block pamcottoncrop;
 	public static Block pamcranberrycrop;
 	public static Block pamcucumbercrop;
-	public static Block pamcurryleafcrop;
 	public static Block pameggplantcrop;
 	public static Block pamelderberrycrop;
 	public static Block pamflaxcrop;
@@ -95,7 +96,13 @@ public class BlockRegistry {
 	public static Block pamwintersquashcrop;
 	public static Block pamzucchinicrop;
 	
-
+	public static Block aridgarden;
+	public static Block frostgarden;
+	public static Block tropicalgarden;
+	public static Block windygarden;
+	public static Block shadedgarden;
+	public static Block soggygarden;
+	
 	public static void registerAll(RegistryEvent.Register<Block> event) {
 		if (!event.getName().equals(ForgeRegistries.BLOCKS.getRegistryName()))
 			return;
@@ -152,8 +159,6 @@ public class BlockRegistry {
 					.doesNotBlockMovement().tickRandomly().hardnessAndResistance(0).sound(SoundType.CROP), "cranberry"));
 			pamcucumbercrop = register("pamcucumbercrop", new BlockPamCrop(Block.Properties.create(Material.PLANTS)
 					.doesNotBlockMovement().tickRandomly().hardnessAndResistance(0).sound(SoundType.CROP), "cucumber"));
-			pamcurryleafcrop = register("pamcurryleafcrop", new BlockPamCrop(Block.Properties.create(Material.PLANTS)
-					.doesNotBlockMovement().tickRandomly().hardnessAndResistance(0).sound(SoundType.CROP), "curryleaf"));
 			pameggplantcrop = register("pameggplantcrop", new BlockPamCrop(Block.Properties.create(Material.PLANTS)
 					.doesNotBlockMovement().tickRandomly().hardnessAndResistance(0).sound(SoundType.CROP), "eggplant"));
 			pamelderberrycrop = register("pamelderberrycrop", new BlockPamCrop(Block.Properties.create(Material.PLANTS)
@@ -258,14 +263,25 @@ public class BlockRegistry {
 					.doesNotBlockMovement().tickRandomly().hardnessAndResistance(0).sound(SoundType.CROP), "wintersquash"));
 			pamzucchinicrop = register("pamzucchinicrop", new BlockPamCrop(Block.Properties.create(Material.PLANTS)
 					.doesNotBlockMovement().tickRandomly().hardnessAndResistance(0).sound(SoundType.CROP), "zucchini"));
+			
+			aridgarden = register("aridgarden", new BlockPamAridGarden(Block.Properties.create(Material.PLANTS)
+					.doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT), "aridgarden"));
+			frostgarden = register("frostgarden", new BlockPamGarden(Block.Properties.create(Material.PLANTS)
+					.doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT), "frostgarden"));
+			tropicalgarden = register("tropicalgarden", new BlockPamGarden(Block.Properties.create(Material.PLANTS)
+					.doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT), "tropicalgarden"));
+			windygarden = register("windygarden", new BlockPamGarden(Block.Properties.create(Material.PLANTS)
+					.doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT), "windygarden"));
+			shadedgarden = register("shadedgarden", new BlockPamGarden(Block.Properties.create(Material.PLANTS)
+					.doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT), "shadedgarden"));
+			soggygarden = register("soggygarden", new BlockPamGarden(Block.Properties.create(Material.PLANTS)
+					.doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT), "soggygarden"));
+			
+			
+			
 	}
 	
-	private static <T extends Block> T register(String name, T block, @Nullable BlockItem item) {
-		ResourceLocation id = Pamhc2crops.getId(name);
-		block.setRegistryName(id);
-		ForgeRegistries.BLOCKS.register(block);
-		return block;
-	}
+	
 
 	private static <T extends Block> T register(String name, T block) {
 		BlockItem item = new BlockItem(block, new Item.Properties().group(Pamhc2crops.ITEM_GROUP));
@@ -273,7 +289,12 @@ public class BlockRegistry {
 	}
 	
 
-
+	private static <T extends Block> T register(String name, T block, @Nullable BlockItem item) {
+		ResourceLocation id = Pamhc2crops.getId(name);
+		block.setRegistryName(id);
+		ForgeRegistries.BLOCKS.register(block);
+		return block;
+	}
 	
 
 }
