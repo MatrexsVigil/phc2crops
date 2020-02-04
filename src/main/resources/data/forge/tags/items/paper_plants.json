@@ -1,0 +1,14 @@
+{
+		"replace": false,
+		"values": [
+			"#forge:paper_plants/blackberry",
+			"#forge:paper_plants/juniperberry",
+			"#forge:paper_plants/kelp",
+			"#forge:paper_plants/mulberry",
+			"#forge:paper_plants/okra",
+			"#forge:paper_plants/pineapple",
+			"#forge:paper_plants/raspberry",
+			"#forge:paper_plants/rice",
+			"#forge:paper_plants/spiceleaf"
+	]
+}

@@ -4,10 +4,10 @@
 	"ingredients":
 	[
     {
-      "item": "pamhc2crops:agaveitem"
+      "tag": "forge:crops/agave"
     },
     {
-      "item": "pamhc2crops:agaveitem"
+      "tag": "forge:crops/agave"
     }
 
 
