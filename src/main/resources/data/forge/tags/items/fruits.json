@@ -1,9 +1,12 @@
 {
 	"replace": false,
 	"values": [
+		"#forge:fruits/blackberries",
 		"#forge:fruits/blackberry",
+		"#forge:fruits/blueberries",
 		"#forge:fruits/blueberry",
 		"#forge:fruits/cactusfruit",
+		"#forge:fruits/cactus_fruit",
 		"#forge:fruits/candleberry",
 		"#forge:fruits/cantaloupe",
 		"#forge:fruits/cranberry",
@@ -16,7 +19,9 @@
 		"#forge:fruits/melon",
 		"#forge:fruits/mulberry",
 		"#forge:fruits/pineapple",
+		"#forge:fruits/raspberries",
 		"#forge:fruits/raspberry",
+		"#forge:fruits/strawberries",
 		"#forge:fruits/strawberry",
 		"#forge:fruits/sweet_berries"
 
