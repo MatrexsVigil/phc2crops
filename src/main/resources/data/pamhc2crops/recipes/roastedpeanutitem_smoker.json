@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:smoking",
+	"ingredient": {"tag": "forge:crops/peanut"},
+	"result": "pamhc2crops:roastedpeanutitem",
+	"experience": 0.35,
+	"cookingtime": 100
+
+}

@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	
+	"ingredients":
+	[
+    {
+      "tag": "forge:grain"
+    },
+    {
+      "tag": "forge:grain"
+    },
+    {
+      "tag": "forge:grain"
+    }
+
+
+	],
+	
+	"result": {"item": "minecraft:bread"}
+	
+}

@@ -1,0 +1,104 @@
+{
+	"type": "minecraft:block",
+	"pools": [{
+		"rolls": 1,
+		"name": "windygarden0",
+		"functions": [{
+				"function": "minecraft:apply_bonus",
+				"enchantment": "minecraft:fortune",
+				"formula": "minecraft:uniform_bonus_count",
+				"parameters": {
+					"bonusMultiplier": 2
+				}
+			},
+			{
+				"function": "minecraft:explosion_decay"
+			}
+		],
+		"entries": [{
+				"type": "item",
+				"name": "pamhc2crops:amaranthitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:artichokeitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:barleyitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:bellpepperitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:chilipepperitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:cornitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:cucumberitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:elderberryitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:flaxitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:lettuceitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:mustardseedsitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:onionitem",
+				"weight": 1
+			}
+			,
+			{
+				"type": "item",
+				"name": "pamhc2crops:parsnipitem",
+				"weight": 1
+			}
+			,
+			{
+				"type": "item",
+				"name": "pamhc2crops:peanutitem",
+				"weight": 1
+			}
+			,
+			{
+				"type": "item",
+				"name": "pamhc2crops:strawberryitem",
+				"weight": 1
+			}
+			,
+			{
+				"type": "item",
+				"name": "pamhc2crops:wintersquashitem",
+				"weight": 1
+			}
+		]
+	}]
+}

@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:smoking",
+	"ingredient": {"tag": "forge:crops/coffeebean"},
+	"result": "pamhc2crops:hotcoffeeitem",
+	"experience": 0.35,
+	"cookingtime": 100
+
+}

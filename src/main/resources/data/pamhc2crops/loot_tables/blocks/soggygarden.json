@@ -1,0 +1,95 @@
+{
+	"type": "minecraft:block",
+	"pools": [{
+		"rolls": 1,
+		"name": "soggygarden0",
+		"functions": [{
+				"function": "minecraft:apply_bonus",
+				"enchantment": "minecraft:fortune",
+				"formula": "minecraft:uniform_bonus_count",
+				"parameters": {
+					"bonusMultiplier": 2
+				}
+			},
+			{
+				"function": "minecraft:explosion_decay"
+			}
+		],
+		"entries": [{
+				"type": "item",
+				"name": "pamhc2crops:asparagusitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:blueberryitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:brusselsproutitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:cottonitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:cranberryitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:greengrapeitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:jicamaitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:kaleitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:milletitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:mulberryitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:okraitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:riceitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:spiceleafitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:tomatilloitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:waterchestnutitem",
+				"weight": 1
+			}
+		]
+	}]
+}

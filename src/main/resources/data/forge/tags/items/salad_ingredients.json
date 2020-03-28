@@ -1,0 +1,19 @@
+{
+	"replace": false,
+	"values": [
+		"#forge:salad_ingredients/artichoke",
+		"#forge:salad_ingredients/asparagus",
+		"#forge:salad_ingredients/broccoli",
+		"#forge:salad_ingredients/brusselsprout",
+		"#forge:salad_ingredients/cabbage",
+		"#forge:salad_ingredients/cauliflower",
+		"#forge:salad_ingredients/kale",
+		"#forge:salad_ingredients/lettuce",
+		"#forge:salad_ingredients/pea",
+		"#forge:salad_ingredients/peas",
+		"#forge:salad_ingredients/spinach",
+		"#forge:salad_ingredients/tomatillo",
+		"#forge:salad_ingredients/tomato",
+		"#forge:salad_ingredients/zucchini"
+	]	
+}

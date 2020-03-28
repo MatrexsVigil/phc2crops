@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:campfire_cooking",
+	"ingredient": {"tag": "forge:crops/leek"},
+	"result": "pamhc2crops:roastedleekitem",
+	"experience": 0.35,
+	"cookingtime": 600
+
+}
