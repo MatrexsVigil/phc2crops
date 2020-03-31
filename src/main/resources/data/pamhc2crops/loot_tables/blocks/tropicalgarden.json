@@ -69,6 +69,11 @@
 				"type": "item",
 				"name": "pamhc2crops:taroitem",
 				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:gingeritem",
+				"weight": 1
 			}
 		]
 	}]
