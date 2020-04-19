@@ -5,6 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.BushBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.pathfinding.PathType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
@@ -35,5 +36,8 @@ public class BlockPamGarden extends BushBlock{
 		return Block.OffsetType.XZ;
 	}
 	
-
+	@Override
+	public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
+	      return true;
+	   }
 }
