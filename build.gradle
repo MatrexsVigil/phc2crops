@@ -34,12 +34,8 @@ minecraft {
 				property 'forge.logging.markers', ''
 				property 'forge.logging.console.level', 'debug'
 				property 'forge.logging.noansi', "false"
-      mods {
-        pamhc2crops {
-          source sourceSets.main
-        }
-      }
 
+				environment 'MOD_CLASSES', "${project.file("bin/default").canonicalPath}"
 }
     server {
       workingDirectory project.file('run')
