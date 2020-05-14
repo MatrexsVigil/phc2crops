@@ -10,24 +10,24 @@ import com.google.common.base.Predicate;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 public class DimensionConfig {
-	public static ForgeConfigSpec.ConfigValue<List<? extends Integer>> whitelist;
-	public static ForgeConfigSpec.ConfigValue<List<? extends Integer>> blacklist;
+	public static ForgeConfigSpec.ConfigValue<List<? extends String>> whitelist;
+	public static ForgeConfigSpec.ConfigValue<List<? extends String>> blacklist;
 
 	public static void init(ForgeConfigSpec.Builder config) {
 
 		whitelist = config.comment("Enter a dimension id to whitelist feature generation").defineList("white_dim",
-				Arrays.asList(0), new Predicate<Object>() {
+				Arrays.asList("minecraft:overworld"), new Predicate<Object>() {
 					@Override
 					public boolean apply(@Nullable Object val) {
-						return val instanceof Integer && val != null;
+						return val instanceof String && ((String) val).contains(":");
 					}
 				});
 
 		blacklist = config.comment("Enter a dimension id to blacklist feature generation").defineList("black_dim",
-				Arrays.asList(-1, 1), new Predicate<Object>() {
+				Arrays.asList("minecraft:the_end", "minecraft:the_nether"), new Predicate<Object>() {
 					@Override
 					public boolean apply(@Nullable Object val) {
-						return val instanceof Integer && val != null;
+						return val instanceof String && ((String) val).contains(":");
 					}
 				});
 

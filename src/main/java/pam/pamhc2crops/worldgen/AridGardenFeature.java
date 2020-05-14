@@ -39,8 +39,8 @@ public class AridGardenFeature extends Feature<NoFeatureConfig> {
 			BlockPos pos, NoFeatureConfig config) {
 
 		if (random.nextInt(ChanceConfig.garden_chance.get()) != 0
-				|| DimensionConfig.blacklist.get().contains(world.getDimension().getType().getId())
-				|| !DimensionConfig.whitelist.get().contains(world.getDimension().getType().getId()))
+			|| DimensionConfig.blacklist.get().contains(world.getDimension().getType().getRegistryName().toString()) // check for size shouldnt be necessary
+			|| (!DimensionConfig.whitelist.get().contains(world.getDimension().getType().getRegistryName().toString()) && DimensionConfig.whitelist.get().size()>0)) // check for size shouldnt be necessary
 			return false;
 		int type = (int) ((Math.random() * 4) + 1);
 		for (int i = 0; i < type; i++) {
