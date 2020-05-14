@@ -15,8 +15,8 @@ public class BlockPamGarden extends BushBlock{
 	@SuppressWarnings("unused")
 	private String name;
 	
-	public BlockPamGarden(Block.Properties p_i49971_1_, String name) {
-		super(Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0.0F));
+	public BlockPamGarden(Block.Properties properties, String name) {
+		super(properties);
 		this.name = name;
 		
 	}
