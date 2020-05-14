@@ -46,7 +46,7 @@ public class SoggyGardenFeature extends Feature<NoFeatureConfig> {
 			BlockPos pos, NoFeatureConfig config) {
 
 		if (random.nextInt(ChanceConfig.garden_chance.get()) != 0
-			|| (DimensionConfig.blacklist.get().contains(world.getDimension().getType().getRegistryName().toString()) && DimensionConfig.blacklist.get().size()>0)
+			|| (DimensionConfig.blacklist.get().contains(world.getDimension().getType().getRegistryName().toString()))
 			|| (!DimensionConfig.whitelist.get().contains(world.getDimension().getType().getRegistryName().toString()) && DimensionConfig.whitelist.get().size()>0))
 			return false;
 		int type = (int) ((Math.random() * 4) + 1);
