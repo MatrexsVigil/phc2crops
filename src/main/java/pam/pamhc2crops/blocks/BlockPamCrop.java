@@ -8,6 +8,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -27,8 +28,12 @@ public class BlockPamCrop extends CropsBlock {
 		return state.getBlock() instanceof FarmlandBlock;
 	}
 
+	@Override
+	protected IItemProvider getSeedsItem() {
+		return this.asItem();
+	}
 
-	
+
 	@Override
 	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
 	      items.add(new ItemStack(this));
