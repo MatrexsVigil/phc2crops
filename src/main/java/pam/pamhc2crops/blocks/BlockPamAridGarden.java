@@ -15,8 +15,8 @@ public class BlockPamAridGarden extends BushBlock{
 	protected static final VoxelShape SHAPE = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 	private String name;
 	
-	public BlockPamAridGarden(Block.Properties p_i49971_1_, String name) {
-		super(Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0.0F));
+	public BlockPamAridGarden(Block.Properties properties, String name) {
+		super(properties);
 		this.name = name;
 		
 	}
