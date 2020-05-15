@@ -19,7 +19,7 @@ public class DimensionConfig {
 				Arrays.asList("minecraft:overworld"), new Predicate<Object>() {
 					@Override
 					public boolean apply(@Nullable Object val) {
-						return val instanceof String && ((String) val).contains(":");
+						return val instanceof String && ResourceLocation.isResouceNameValid((String)val);
 					}
 				});
 
@@ -27,7 +27,7 @@ public class DimensionConfig {
 				Arrays.asList("minecraft:the_end", "minecraft:the_nether"), new Predicate<Object>() {
 					@Override
 					public boolean apply(@Nullable Object val) {
-						return val instanceof String && ((String) val).contains(":");
+						return val instanceof String && ResourceLocation.isResouceNameValid((String)val);
 					}
 				});
 
