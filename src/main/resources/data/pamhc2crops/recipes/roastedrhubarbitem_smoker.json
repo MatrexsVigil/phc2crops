@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:smoking",
+	"ingredient": {"tag": "forge:crops/rhubarb"},
+	"result": "pamhc2crops:roastedrhubarbitem",
+	"experience": 0.35,
+	"cookingtime": 100
+
+}

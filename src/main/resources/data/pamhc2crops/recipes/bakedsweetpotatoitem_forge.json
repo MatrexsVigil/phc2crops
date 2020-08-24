@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {"tag": "forge:crops/sweetpotato"},
+	"result": "pamhc2crops:bakedsweetpotatoitem",
+	"experience": 0.35,
+	"cookingtime": 200
+
+}

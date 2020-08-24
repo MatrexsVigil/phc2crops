@@ -1,0 +1,23 @@
+{
+		"replace": false,
+		"values": [
+"#forge:rootvegetables/arrowroot",
+"#forge:rootvegetables/cassava",
+"#forge:rootvegetables/garlic",
+"#forge:rootvegetables/jicama",
+"#forge:rootvegetables/kohlrabi",
+"#forge:rootvegetables/leek",
+"#forge:rootvegetables/onion",
+"#forge:rootvegetables/parsnip",
+"#forge:rootvegetables/peanut",
+"#forge:rootvegetables/radish",
+"#forge:rootvegetables/rhubarb",
+"#forge:rootvegetables/rutabaga",
+"#forge:rootvegetables/scallion",
+"#forge:rootvegetables/sweetpotato",
+"#forge:rootvegetables/sweet_potato",
+"#forge:rootvegetables/taro",
+"#forge:rootvegetables/turnip",
+"#forge:rootvegetables/waterchestnut"
+	]
+}
