@@ -1,0 +1,95 @@
+{
+	"type": "minecraft:block",
+	"pools": [{
+		"rolls": 1,
+		"name": "shadedgarden0",
+		"functions": [{
+				"function": "minecraft:apply_bonus",
+				"enchantment": "minecraft:fortune",
+				"formula": "minecraft:uniform_bonus_count",
+				"parameters": {
+					"bonusMultiplier": 2
+				}
+			},
+			{
+				"function": "minecraft:explosion_decay"
+			}
+		],
+		"entries": [{
+				"type": "item",
+				"name": "pamhc2crops:beanitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:blackberryitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:garlicitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:juteitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:leekitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:radishitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:rhubarbitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:scallionitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:spiceleafitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:sweetpotatoitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:tealeafitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:tomatoitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:turnipitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:whitemushroomitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:zucchiniitem",
+				"weight": 1
+			}
+		]
+	}]
+}

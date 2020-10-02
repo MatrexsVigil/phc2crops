@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {"tag": "forge:crops/scallion"},
+	"result": "pamhc2crops:roastedscallionitem",
+	"experience": 0.35,
+	"cookingtime": 200
+
+}

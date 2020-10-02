@@ -1,0 +1,80 @@
+{
+	"type": "minecraft:block",
+	"pools": [{
+		"rolls": 1,
+		"name": "tropicalgarden0",
+		"functions": [{
+				"function": "minecraft:apply_bonus",
+				"enchantment": "minecraft:fortune",
+				"formula": "minecraft:uniform_bonus_count",
+				"parameters": {
+					"bonusMultiplier": 2
+				}
+			},
+			{
+				"function": "minecraft:explosion_decay"
+			}
+		],
+		"entries": [{
+				"type": "item",
+				"name": "pamhc2crops:arrowrootitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:cantaloupeitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:coffeebeanitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:eggplantitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:grapeitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:kenafitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:kiwiitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:pineappleitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:sesameseedsitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:soybeanitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:taroitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:gingeritem",
+				"weight": 1
+			}
+		]
+	}]
+}

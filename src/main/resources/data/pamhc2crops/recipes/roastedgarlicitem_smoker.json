@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:smoking",
+	"ingredient": {"tag": "forge:crops/garlic"},
+	"result": "pamhc2crops:roastedgarlicitem",
+	"experience": 0.35,
+	"cookingtime": 100
+
+}

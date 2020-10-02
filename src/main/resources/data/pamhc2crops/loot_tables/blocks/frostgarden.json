@@ -1,0 +1,95 @@
+{
+	"type": "minecraft:block",
+	"pools": [{
+		"rolls": 1,
+		"name": "frostgarden0",
+		"functions": [{
+				"function": "minecraft:apply_bonus",
+				"enchantment": "minecraft:fortune",
+				"formula": "minecraft:uniform_bonus_count",
+				"parameters": {
+					"bonusMultiplier": 2
+				}
+			},
+			{
+				"function": "minecraft:explosion_decay"
+			}
+		],
+		"entries": [{
+				"type": "item",
+				"name": "pamhc2crops:broccoliitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:cabbageitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:caulifloweritem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:celeryitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:cottonitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:huckleberryitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:juniperberryitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:kohlrabiitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:oatsitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:peasitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:quinoaitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:raspberryitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:rutabagaitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:ryeitem",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "pamhc2crops:spinachitem",
+				"weight": 1
+			}
+		]
+	}]
+}

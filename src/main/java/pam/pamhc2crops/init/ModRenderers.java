@@ -1,0 +1,95 @@
+package pam.pamhc2crops.init;
+
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
+
+public class ModRenderers {
+	public static void registerBlocks() {
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamagavecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamamaranthcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamarrowrootcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamartichokecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamasparaguscrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pambarleycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pambeancrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pambellpeppercrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamblackberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamblueberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pambroccolicrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pambrusselsproutcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcabbagecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcactusfruitcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcandleberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcantaloupecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcassavacrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcauliflowercrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcelerycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamchickpeacrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamchilipeppercrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcoffeebeancrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcorncrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcottoncrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcranberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamcucumbercrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pameggplantcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamelderberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamflaxcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamgarliccrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamgingercrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamgrapecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamgreengrapecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamhuckleberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamjicamacrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamjuniperberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamjutecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamkalecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamkenafcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamkiwicrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamkohlrabicrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamleekcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamlentilcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamlettucecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pammilletcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pammulberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pammustardseedscrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamoatscrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamokracrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamonioncrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamparsnipcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pampeanutcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pampeascrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pampineapplecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamquinoacrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamradishcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamraspberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamrhubarbcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamricecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamrutabagacrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamryecrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamscallioncrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamsesameseedscrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamsisalcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamsoybeancrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamspiceleafcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamspinachcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamstrawberrycrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamsweetpotatocrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamtarocrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamtealeafcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamtomatillocrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamtomatocrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamturnipcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamwaterchestnutcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamwhitemushroomcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamwintersquashcrop, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.pamzucchinicrop, RenderType.getCutout());
+		
+		RenderTypeLookup.setRenderLayer(BlockRegistry.aridgarden, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.frostgarden, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.tropicalgarden, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.windygarden, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.shadedgarden, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockRegistry.soggygarden, RenderType.getCutout());
+
+}
+}

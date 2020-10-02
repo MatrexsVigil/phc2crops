@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "pamhc2crops:block/windygarden"
+    }
+}
+
