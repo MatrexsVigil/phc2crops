@@ -2,7 +2,6 @@ package pam.pamhc2crops.config;
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
-
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.common.Mod;
 
@@ -19,6 +18,10 @@ public class Config {
 		
 		BUILDER.push("Tweak Garden Cluster Rates");
 		ChanceConfig.init(BUILDER);
+		BUILDER.pop();
+
+		BUILDER.push("Tweak Garden Cluster Sizes");
+		ClusterConfig.init(BUILDER);
 		BUILDER.pop();
 
 		BUILDER.push("Miscellaneous Features");

@@ -2,20 +2,11 @@ package pam.pamhc2crops.worldgen;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
-import pam.pamhc2crops.Pamhc2crops;
-import pam.pamhc2crops.config.ChanceConfig;
 import pam.pamhc2crops.config.EnableConfig;
-import pam.pamhc2crops.init.FeatureRegistry;
-import pam.pamhc2crops.worldgen.configs.FeatureConfigs;
 
-@Mod.EventBusSubscriber(modid = Pamhc2crops.MOD_ID)
 public final class GardenGeneration {
     
     private GardenGeneration() {}
@@ -24,7 +15,6 @@ public final class GardenGeneration {
     }
     
 
-    @SubscribeEvent
     public static void addFeaturesToBiomes(BiomeLoadingEvent biome) {
         
     	if (biome.getCategory() == Biome.Category.DESERT || biome.getCategory() == Biome.Category.MESA) {
@@ -77,46 +67,26 @@ public final class GardenGeneration {
     }
 
     private static void addAridGarden(BiomeLoadingEvent biome) {
-        
-        biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
-        		Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.ARID_GARDEN_CONFIG)
-        		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
-        
+        biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.ARID_GARDEN);
     }
     
     private static void addFrostGarden(BiomeLoadingEvent biome) {
-        
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
-        		Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.FROST_GARDEN_CONFIG)
-        		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.FROST_GARDEN);
     }
     
     private static void addShadedGarden(BiomeLoadingEvent biome) {
-        
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
-        		Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.SHADED_GARDEN_CONFIG)
-        		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.SHADED_GARDEN);
     }
-    
-    
+
     private static void addSoggyGarden(BiomeLoadingEvent biome) {
-        
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
-        		Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.SOGGY_GARDEN_CONFIG)
-        		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.SOGGY_GARDEN);
     }
 
     private static void addTropicalGarden(BiomeLoadingEvent biome) {
-        
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
-        		Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.TROPICAL_GARDEN_CONFIG)
-        		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.TROPICAL_GARDEN);
     }
     
     private static void addWindyGarden(BiomeLoadingEvent biome) {
-        
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
-        		Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.WINDY_GARDEN_CONFIG)
-        		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.WINDY_GARDEN);
     }
 }
