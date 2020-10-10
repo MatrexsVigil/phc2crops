@@ -1,8 +1,5 @@
 package pam.pamhc2crops.events.harvest;
 
-import java.lang.reflect.Method;
-import java.util.List;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CropsBlock;
@@ -22,6 +19,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import pam.pamhc2crops.Pamhc2crops;
 import pam.pamhc2crops.config.RightClickConfig;
+
+import java.lang.reflect.Method;
+import java.util.List;
 
 public class CropHarvest {
 

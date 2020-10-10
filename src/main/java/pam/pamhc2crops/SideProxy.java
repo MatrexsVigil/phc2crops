@@ -2,19 +2,11 @@ package pam.pamhc2crops;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
+import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
@@ -22,7 +14,6 @@ import pam.pamhc2crops.config.Config;
 import pam.pamhc2crops.events.EventSetup;
 import pam.pamhc2crops.init.BlockRegistry;
 import pam.pamhc2crops.init.CompostRegistry;
-import pam.pamhc2crops.init.FeatureRegistry;
 import pam.pamhc2crops.init.ItemRegistry;
 import pam.pamhc2crops.init.ModRenderers;
 import pam.pamhc2crops.worldgen.GardenGeneration;
@@ -50,20 +41,8 @@ public class SideProxy {
 		Pamhc2crops.LOGGER.debug("common setup");
 		EventSetup.setupEvents();
 		CompostRegistry.register();
-
 		
 	}
-	
-	//@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-	//public static class RegistryEvents
-	//{
-	//	@SubscribeEvent
-	//	public static void onRegisterFeatures(final RegistryEvent.Register<Feature<?>> event)
-	//	{
-	//		FeatureRegistry.registerConfiguredFeatures();
-	//		
-	//	}
-	//}
 
 	private static void enqueueIMC(final InterModEnqueueEvent event) {
 	}
@@ -88,11 +67,9 @@ public class SideProxy {
 	static class Server extends SideProxy {
 		Server() {
 			FMLJavaModLoadingContext.get().getModEventBus().addListener(Server::serverSetup);
-
 		}
 
 		private static void serverSetup(FMLDedicatedServerSetupEvent event) {
-
 		}
 	}
 
