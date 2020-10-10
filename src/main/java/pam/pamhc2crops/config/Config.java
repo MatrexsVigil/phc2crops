@@ -16,9 +16,13 @@ public class Config {
 		ChanceConfig.init(BUILDER);
 		BUILDER.pop();
 		
-		//BUILDER.push("Tweak Garden Cluster Rates");
-		//ChanceConfig.init(BUILDER);
-		//BUILDER.pop();
+		BUILDER.push("Tweak Garden Cluster Rates");
+		ChanceConfig.init(BUILDER);
+		BUILDER.pop();
+
+		BUILDER.push("Tweak Garden Cluster Sizes");
+		ClusterConfig.init(BUILDER);
+		BUILDER.pop();
 
 		BUILDER.push("Tweak Garden Cluster Sizes");
 		ClusterConfig.init(BUILDER);
