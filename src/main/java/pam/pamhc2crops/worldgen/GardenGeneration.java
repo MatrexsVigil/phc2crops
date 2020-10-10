@@ -32,7 +32,7 @@ public final class GardenGeneration {
             
         }
     	
-    	if (biome.getCategory() == Biome.Category.FOREST) {
+    	if (biome.getCategory() == Biome.Category.FOREST || biome.getCategory() == Biome.Category.TAIGA) {
     		if (EnableConfig.enable_shadedgarden.get())
     		{
     			addShadedGarden(biome);
@@ -62,10 +62,10 @@ public final class GardenGeneration {
     			addWindyGarden(biome);
     		}
             
-        }
+        }   
 
     }
-
+    
     private static void addAridGarden(BiomeLoadingEvent biome) {
         biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.ARID_GARDEN);
     }
