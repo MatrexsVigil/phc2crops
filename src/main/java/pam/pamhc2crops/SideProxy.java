@@ -2,9 +2,13 @@ package pam.pamhc2crops;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -18,6 +22,7 @@ import pam.pamhc2crops.config.Config;
 import pam.pamhc2crops.events.EventSetup;
 import pam.pamhc2crops.init.BlockRegistry;
 import pam.pamhc2crops.init.CompostRegistry;
+import pam.pamhc2crops.init.FeatureRegistry;
 import pam.pamhc2crops.init.ItemRegistry;
 import pam.pamhc2crops.init.ModRenderers;
 import pam.pamhc2crops.worldgen.GardenGeneration;
@@ -48,6 +53,17 @@ public class SideProxy {
 
 		
 	}
+	
+	//@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+	//public static class RegistryEvents
+	//{
+	//	@SubscribeEvent
+	//	public static void onRegisterFeatures(final RegistryEvent.Register<Feature<?>> event)
+	//	{
+	//		FeatureRegistry.registerConfiguredFeatures();
+	//		
+	//	}
+	//}
 
 	private static void enqueueIMC(final InterModEnqueueEvent event) {
 	}
