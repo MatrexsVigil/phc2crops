@@ -15,6 +15,7 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
+import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import pam.pamhc2crops.Pamhc2crops;
@@ -53,32 +54,35 @@ public class CropHarvest {
 				CropsBlock crop = (CropsBlock) event.getWorld().getBlockState(event.getPos()).getBlock();
 				if (crop.isMaxAge(event.getWorld().getBlockState(event.getPos()))) {
 					if (!event.getWorld().isRemote) {
-						drops = Block.getDrops(event.getWorld().getBlockState(event.getPos()),
-								(ServerWorld) event.getWorld(), event.getPos(),
-								event.getWorld().getTileEntity(event.getPos()));
-						for (int i = 0; i < drops.size(); i++) {
-							if (drops.get(i).getItem() != getCropSeed(crop))
-								event.getWorld()
-										.addEntity(new ItemEntity((World) event.getWorld(), event.getPos().getX(),
-												event.getPos().getY(), event.getPos().getZ(),
-												(ItemStack) drops.get(i)));
-						}
-						for (int i = 0; i < drops.size(); i++) {
-							if (drops.stream().distinct().limit(2).count() <= 1 || crop == Blocks.POTATOES
-									|| crop == Blocks.CARROTS) {
-								drops.remove(0);
-								event.getWorld()
-										.addEntity(new ItemEntity((World) event.getWorld(), event.getPos().getX(),
-												event.getPos().getY(), event.getPos().getZ(),
-												(ItemStack) drops.get(i)));
+						BreakEvent breakEvent = new BreakEvent(event.getWorld(), event.getPos(), event.getWorld().getBlockState(event.getPos()), event.getPlayer());
+						if (!breakEvent.isCanceled()) {
+							drops = Block.getDrops(event.getWorld().getBlockState(event.getPos()),
+									(ServerWorld) event.getWorld(), event.getPos(),
+									event.getWorld().getTileEntity(event.getPos()));
+							for (int i = 0; i < drops.size(); i++) {
+								if (drops.get(i).getItem() != getCropSeed(crop))
+									event.getWorld()
+											.addEntity(new ItemEntity((World) event.getWorld(), event.getPos().getX(),
+													event.getPos().getY(), event.getPos().getZ(),
+													(ItemStack) drops.get(i)));
 							}
-
+							for (int i = 0; i < drops.size(); i++) {
+								if (drops.stream().distinct().limit(2).count() <= 1 || crop == Blocks.POTATOES
+										|| crop == Blocks.CARROTS) {
+									drops.remove(0);
+									event.getWorld()
+											.addEntity(new ItemEntity((World) event.getWorld(), event.getPos().getX(),
+													event.getPos().getY(), event.getPos().getZ(),
+													(ItemStack) drops.get(i)));
+								}
+	
+							}
+							event.getPlayer().addExhaustion(.05F);
+							event.getWorld().playSound((PlayerEntity) null, event.getPos(), SoundEvents.BLOCK_CROP_BREAK,
+									SoundCategory.BLOCKS, 1.0F, 0.8F + event.getWorld().rand.nextFloat() * 0.4F);
+							event.getWorld().setBlockState(event.getPos(), crop.getDefaultState(), 2);
+	
 						}
-						event.getPlayer().addExhaustion(.05F);
-						event.getWorld().playSound((PlayerEntity) null, event.getPos(), SoundEvents.BLOCK_CROP_BREAK,
-								SoundCategory.BLOCKS, 1.0F, 0.8F + event.getWorld().rand.nextFloat() * 0.4F);
-						event.getWorld().setBlockState(event.getPos(), crop.getDefaultState(), 2);
-
 					}
 					event.getPlayer().swingArm(Hand.MAIN_HAND);
 				}
@@ -93,20 +97,23 @@ public class CropHarvest {
 
 					if (event.getWorld().getBlockState(event.getPos()).get(NetherWartBlock.AGE) == 3) {
 						if (!event.getWorld().isRemote) {
-							drops = Block.getDrops(event.getWorld().getBlockState(event.getPos()),
-									(ServerWorld) event.getWorld(), event.getPos(),
-									event.getWorld().getTileEntity(event.getPos()));
-							for (int i = 0; i < drops.size(); i++) {
-								event.getWorld()
-										.addEntity(new ItemEntity((World) event.getWorld(), event.getPos().getX(),
-												event.getPos().getY(), event.getPos().getZ(),
-												(ItemStack) drops.get(i)));
+							BreakEvent breakEvent = new BreakEvent(event.getWorld(), event.getPos(), event.getWorld().getBlockState(event.getPos()), event.getPlayer());
+							if (!breakEvent.isCanceled()) {
+								drops = Block.getDrops(event.getWorld().getBlockState(event.getPos()),
+										(ServerWorld) event.getWorld(), event.getPos(),
+										event.getWorld().getTileEntity(event.getPos()));
+								for (int i = 0; i < drops.size(); i++) {
+									event.getWorld()
+											.addEntity(new ItemEntity((World) event.getWorld(), event.getPos().getX(),
+													event.getPos().getY(), event.getPos().getZ(),
+													(ItemStack) drops.get(i)));
+								}
+								event.getPlayer().addExhaustion(.05F);
+								event.getWorld().playSound((PlayerEntity) null, event.getPos(),
+										SoundEvents.BLOCK_NETHER_WART_BREAK, SoundCategory.BLOCKS, 1.0F,
+										0.8F + event.getWorld().rand.nextFloat() * 0.4F);
+								event.getWorld().setBlockState(event.getPos(), nether.getDefaultState(), 2);
 							}
-							event.getPlayer().addExhaustion(.05F);
-							event.getWorld().playSound((PlayerEntity) null, event.getPos(),
-									SoundEvents.BLOCK_NETHER_WART_BREAK, SoundCategory.BLOCKS, 1.0F,
-									0.8F + event.getWorld().rand.nextFloat() * 0.4F);
-							event.getWorld().setBlockState(event.getPos(), nether.getDefaultState(), 2);
 						}
 						event.getPlayer().swingArm(Hand.MAIN_HAND);
 					}
