@@ -14,6 +14,7 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -55,6 +56,7 @@ public class CropHarvest {
 				if (crop.isMaxAge(event.getWorld().getBlockState(event.getPos()))) {
 					if (!event.getWorld().isRemote) {
 						BreakEvent breakEvent = new BreakEvent(event.getWorld(), event.getPos(), event.getWorld().getBlockState(event.getPos()), event.getPlayer());
+						MinecraftForge.EVENT_BUS.post(breakEvent);
 						if (!breakEvent.isCanceled()) {
 							drops = Block.getDrops(event.getWorld().getBlockState(event.getPos()),
 									(ServerWorld) event.getWorld(), event.getPos(),
@@ -98,6 +100,7 @@ public class CropHarvest {
 					if (event.getWorld().getBlockState(event.getPos()).get(NetherWartBlock.AGE) == 3) {
 						if (!event.getWorld().isRemote) {
 							BreakEvent breakEvent = new BreakEvent(event.getWorld(), event.getPos(), event.getWorld().getBlockState(event.getPos()), event.getPlayer());
+							MinecraftForge.EVENT_BUS.post(breakEvent);
 							if (!breakEvent.isCanceled()) {
 								drops = Block.getDrops(event.getWorld().getBlockState(event.getPos()),
 										(ServerWorld) event.getWorld(), event.getPos(),
