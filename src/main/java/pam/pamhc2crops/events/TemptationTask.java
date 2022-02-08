@@ -184,27 +184,52 @@ public class TemptationTask {
 
 		if (entity instanceof ChickenEntity) {
 			ChickenEntity chicken = (ChickenEntity) entity;
-			chicken.goalSelector.addGoal(3, new MoreTemptation(chicken, 1.0D, false, Chicken));
+			try {
+            			chicken.goalSelector.addGoal(3, new MoreTemptation(chicken, 1.0D, false, Chicken));
+            		} catch(IllegalArgumentException e) {
+            			// whoops
+            		}
+			
 		}
 
 		if (entity instanceof CowEntity) {
 			CowEntity cow = (CowEntity) entity;
-			cow.goalSelector.addGoal(3, new MoreTemptation(cow, 1.25D, false, Grain));
+			try {
+            			cow.goalSelector.addGoal(3, new MoreTemptation(cow, 1.25D, false, Grain));
+            		} catch(IllegalArgumentException e) {
+            			// whoops
+            		}
+			
 		}
 
 		if (entity instanceof SheepEntity) {
 			SheepEntity sheep = (SheepEntity) entity;
-			sheep.goalSelector.addGoal(3, new MoreTemptation(sheep, 1.0D, false, Grain));
+			try {
+            			sheep.goalSelector.addGoal(3, new MoreTemptation(sheep, 1.0D, false, Grain));
+            		} catch(IllegalArgumentException e) {
+            			// whoops
+            		}
+			
 		}
 
 		if (entity instanceof PigEntity) {
 			PigEntity pig = (PigEntity) entity;
-			pig.goalSelector.addGoal(4, new MoreTemptation(pig, 1.2D, false, Pig));
+			try {
+            			pig.goalSelector.addGoal(4, new MoreTemptation(pig, 1.2D, false, Pig));
+            		} catch(IllegalArgumentException e) {
+            			// whoops
+            		}
+			
 		}
 
 		if (entity instanceof RabbitEntity) {
 			RabbitEntity rabbit = (RabbitEntity) entity;
-			rabbit.goalSelector.addGoal(4, new MoreTemptation(rabbit, 1.2D, false, Rabbit));
+			try {
+            			rabbit.goalSelector.addGoal(4, new MoreTemptation(rabbit, 1.2D, false, Rabbit));
+            		} catch(IllegalArgumentException e) {
+            			// whoops
+            		}
+			
 		}
 	}
 }
