@@ -1,8 +1,8 @@
 package pam.pamhc2crops;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -19,8 +19,8 @@ import javax.annotation.Nonnull;
 public class Pamhc2crops {
 	public static final String MOD_ID = "pamhc2crops";
 	public static final Logger LOGGER = LogManager.getLogger();
-	public static final ItemGroup ITEM_GROUP = new ItemGroup("pamhc2crops") {
-		public ItemStack createIcon() {
+	public static final CreativeModeTab ITEM_GROUP = new CreativeModeTab("pamhc2crops") {
+		public ItemStack makeIcon() {
 			return new ItemStack(ItemRegistry.barleyitem);
 		}
 

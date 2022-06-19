@@ -1,95 +1,95 @@
 package pam.pamhc2crops.init;
 
-import net.minecraft.item.Food;
+import net.minecraft.world.food.FoodProperties;
 
 public class FoodBuilderRegistry {
 		
 	//Vegetables
-	public static final Food ARTICHOKEITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food ASPARAGUSITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food BELLPEPPERITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food BROCCOLIITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food BRUSSELSPROUTITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food CABBAGEITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food CAULIFLOWERITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food CELERYITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food CHILIPEPPERITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food CUCUMBERITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food EGGPLANTITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food KALEITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food LETTUCEITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food OKRAITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food PEASITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food SPINACHITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food TOMATILLOITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food TOMATOITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food WINTERSQUASHITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food ZUCCHINIITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
+	public static final FoodProperties ARTICHOKEITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties ASPARAGUSITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties BELLPEPPERITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties BROCCOLIITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties BRUSSELSPROUTITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties CABBAGEITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties CAULIFLOWERITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties CELERYITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties CHILIPEPPERITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties CUCUMBERITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties EGGPLANTITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties KALEITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties LETTUCEITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties OKRAITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties PEASITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties SPINACHITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties TOMATILLOITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties TOMATOITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties WINTERSQUASHITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties ZUCCHINIITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
 	
 	//Root Vegetables
-	public static final Food ARROWROOTITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food CASSAVAITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food GARLICITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food JICAMAITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food LEEKITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food KOHLRABIITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food ONIONITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food PARSNIPITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food PEANUTITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food RADISHITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food RHUBARBITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food RUTABAGAITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food SCALLIONITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food SWEETPOTATOITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food TAROITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food TURNIPITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food WATERCHESTNUTITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
+	public static final FoodProperties ARROWROOTITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties CASSAVAITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties GARLICITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties JICAMAITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties LEEKITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties KOHLRABIITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties ONIONITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties PARSNIPITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties PEANUTITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties RADISHITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties RHUBARBITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties RUTABAGAITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties SCALLIONITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties SWEETPOTATOITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties TAROITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties TURNIPITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties WATERCHESTNUTITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
 			
 	//Fruits
-	public static final Food BLACKBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-	public static final Food BLUEBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-	public static final Food CACTUSFRUITITEM = (new Food.Builder()).hunger(2).saturation(0.3F).build();
-	public static final Food CANDLEBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-	public static final Food CANTALOUPEITEM = (new Food.Builder()).hunger(2).saturation(0.3F).build();
-	public static final Food CRANBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-	public static final Food ELDERBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-	public static final Food GRAPEITEM = (new Food.Builder()).hunger(2).saturation(0.3F).build();
-	public static final Food GREENGRAPEITEM = (new Food.Builder()).hunger(2).saturation(0.3F).build();
-	public static final Food HUCKLEBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-	public static final Food JUNIPERBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-	public static final Food KIWIITEM = (new Food.Builder()).hunger(2).saturation(0.3F).build();
-	public static final Food MULBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-	public static final Food PINEAPPLEITEM = (new Food.Builder()).hunger(2).saturation(0.3F).build();
-	public static final Food RASPBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-	public static final Food STRAWBERRYITEM = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+	public static final FoodProperties BLACKBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+	public static final FoodProperties BLUEBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+	public static final FoodProperties CACTUSFRUITITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+	public static final FoodProperties CANDLEBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+	public static final FoodProperties CANTALOUPEITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+	public static final FoodProperties CRANBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+	public static final FoodProperties ELDERBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+	public static final FoodProperties GRAPEITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+	public static final FoodProperties GREENGRAPEITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+	public static final FoodProperties HUCKLEBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+	public static final FoodProperties JUNIPERBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+	public static final FoodProperties KIWIITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+	public static final FoodProperties MULBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+	public static final FoodProperties PINEAPPLEITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+	public static final FoodProperties RASPBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+	public static final FoodProperties STRAWBERRYITEM = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
 			
 	//Misc
-	public static final Food WHITEMUSHROOMITEM = (new Food.Builder()).hunger(1).saturation(0.3F).build();
-	public static final Food SPICELEAF  = (new Food.Builder()).hunger(1).saturation(0.1F).build();
+	public static final FoodProperties WHITEMUSHROOMITEM = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
+	public static final FoodProperties SPICELEAF  = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.1F).build();
 
 	//Baked Root Vegetable
-	public static final Food BAKEDARROWROOTITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food BAKEDCASSAVAITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food ROASTEDGARLICITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food BAKEDJICAMAITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food ROASTEDLEEKITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food ROASTEDKOHLRABIITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food ROASTEDONIONITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food BAKEDPARSNIPITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food ROASTEDPEANUTITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food ROASTEDRADISHITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food ROASTEDRHUBARBITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food BAKEDRUTABAGAITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food ROASTEDSCALLIONITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food BAKEDSWEETPOTATOITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food BAKEDTAROITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food BAKEDTURNIPITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
-	public static final Food BAKEDWATERCHESTNUTITEM = (new Food.Builder()).hunger(5).saturation(0.6F).build();
+	public static final FoodProperties BAKEDARROWROOTITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties BAKEDCASSAVAITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties ROASTEDGARLICITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties BAKEDJICAMAITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties ROASTEDLEEKITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties ROASTEDKOHLRABIITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties ROASTEDONIONITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties BAKEDPARSNIPITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties ROASTEDPEANUTITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties ROASTEDRADISHITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties ROASTEDRHUBARBITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties BAKEDRUTABAGAITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties ROASTEDSCALLIONITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties BAKEDSWEETPOTATOITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties BAKEDTAROITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties BAKEDTURNIPITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
+	public static final FoodProperties BAKEDWATERCHESTNUTITEM = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build();
 	
 	//Becomes Vegetable-level when cooked
-	public static final Food ROASTEDMUSHROOMITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food HOTTEAITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
-	public static final Food HOTCOFFEEITEM = (new Food.Builder()).hunger(3).saturation(0.6F).build();
+	public static final FoodProperties ROASTEDMUSHROOMITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties HOTTEAITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
+	public static final FoodProperties HOTCOFFEEITEM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
 	
 
 }

@@ -1,9 +1,9 @@
 package pam.pamhc2crops.events;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.passive.*;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.animal.*;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import pam.pamhc2crops.entities.ai.MoreTemptation;
@@ -11,7 +11,7 @@ import pam.pamhc2crops.init.ItemRegistry;
 
 public class TemptationTask {
 
-	private static final Ingredient Chicken = Ingredient.fromItems(
+	private static final Ingredient Chicken = Ingredient.of(
 			ItemRegistry.agaveseeditem,
 			ItemRegistry.amaranthseeditem,
 			ItemRegistry.arrowrootseeditem,
@@ -94,7 +94,7 @@ public class TemptationTask {
 			);
 		
 	
-	private static final Ingredient Grain = Ingredient.fromItems(
+	private static final Ingredient Grain = Ingredient.of(
 			ItemRegistry.amaranthitem,
 			ItemRegistry.barleyitem,
 			ItemRegistry.beanitem,
@@ -110,7 +110,7 @@ public class TemptationTask {
 			
 			);
 
-	private static final Ingredient Pig = Ingredient.fromItems(
+	private static final Ingredient Pig = Ingredient.of(
 			ItemRegistry.arrowrootitem,
 			ItemRegistry.artichokeitem,
 			ItemRegistry.asparagusitem,
@@ -151,7 +151,7 @@ public class TemptationTask {
 			
 			);
 
-	private static final Ingredient Rabbit = Ingredient.fromItems(
+	private static final Ingredient Rabbit = Ingredient.of(
 			ItemRegistry.blackberryitem,
 			ItemRegistry.blueberryitem,
 			ItemRegistry.cactusfruititem, 
@@ -178,28 +178,28 @@ public class TemptationTask {
 	public void onEntitySpawn(EntityJoinWorldEvent event) {
 		Entity entity = event.getEntity();
 
-		if (entity instanceof ChickenEntity) {
-			ChickenEntity chicken = (ChickenEntity) entity;
+		if (entity instanceof Chicken) {
+			Chicken chicken = (Chicken) entity;
 			chicken.goalSelector.addGoal(3, new MoreTemptation(chicken, 1.0D, false, Chicken));
 		}
 
-		if (entity instanceof CowEntity) {
-			CowEntity cow = (CowEntity) entity;
+		if (entity instanceof Cow) {
+			Cow cow = (Cow) entity;
 			cow.goalSelector.addGoal(3, new MoreTemptation(cow, 1.25D, false, Grain));
 		}
 
-		if (entity instanceof SheepEntity) {
-			SheepEntity sheep = (SheepEntity) entity;
+		if (entity instanceof Sheep) {
+			Sheep sheep = (Sheep) entity;
 			sheep.goalSelector.addGoal(3, new MoreTemptation(sheep, 1.0D, false, Grain));
 		}
 
-		if (entity instanceof PigEntity) {
-			PigEntity pig = (PigEntity) entity;
+		if (entity instanceof Pig) {
+			Pig pig = (Pig) entity;
 			pig.goalSelector.addGoal(4, new MoreTemptation(pig, 1.2D, false, Pig));
 		}
 
-		if (entity instanceof RabbitEntity) {
-			RabbitEntity rabbit = (RabbitEntity) entity;
+		if (entity instanceof Rabbit) {
+			Rabbit rabbit = (Rabbit) entity;
 			rabbit.goalSelector.addGoal(4, new MoreTemptation(rabbit, 1.2D, false, Rabbit));
 		}
 	}

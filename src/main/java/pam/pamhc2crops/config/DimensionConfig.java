@@ -1,7 +1,7 @@
 package pam.pamhc2crops.config;
 
 import com.google.common.base.Predicate;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public class DimensionConfig {
 				Arrays.asList("minecraft:overworld"), new Predicate<Object>() {
 					@Override
 					public boolean apply(@Nullable Object val) {
-						return val instanceof String && ResourceLocation.tryCreate((String)val) != null;
+						return val instanceof String && ResourceLocation.tryParse((String)val) != null;
 					}
 				});
 
@@ -26,7 +26,7 @@ public class DimensionConfig {
 				Arrays.asList("minecraft:the_end", "minecraft:the_nether"), new Predicate<Object>() {
 					@Override
 					public boolean apply(@Nullable Object val) {
-						return val instanceof String && ResourceLocation.tryCreate((String)val) != null;
+						return val instanceof String && ResourceLocation.tryParse((String)val) != null;
 					}
 				});
 
