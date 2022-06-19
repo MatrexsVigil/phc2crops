@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.*;
@@ -34,14 +35,20 @@ public class SideProxy {
 		Config.loadConfig(Config.CONFIG, FMLPaths.CONFIGDIR.get().resolve("pamhc2crops.toml").toString());
 
 		MinecraftForge.EVENT_BUS.addListener(SideProxy::serverStarting);
+		MinecraftForge.EVENT_BUS.addListener(SideProxy::onBiomeLoad);
 	}
 
 	
 	private static void commonSetup(FMLCommonSetupEvent event) {
 		Pamhc2crops.LOGGER.debug("common setup");
 		EventSetup.setupEvents();
-		CompostRegistry.register();
-		
+		event.enqueueWork(() -> {
+			CompostRegistry.register();
+		});
+	}
+
+	private static void onBiomeLoad(BiomeLoadingEvent event) {
+		GardenGeneration.addFeaturesToBiomes(event);
 	}
 
 	private static void enqueueIMC(final InterModEnqueueEvent event) {

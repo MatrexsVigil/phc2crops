@@ -27,11 +27,6 @@ public class Pamhc2crops {
 	};
 
 	public Pamhc2crops() {
-		// Done here to just get them working lol.
-		// You can move them to where the belong on your proxies if you prefer them there
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(FeatureRegistry::registerConfiguredFeatures);
-		MinecraftForge.EVENT_BUS.addListener(GardenGeneration::addFeaturesToBiomes);
-
 		// Cleaned up proxies and swapped depreciated method for safeRunForDist
 		DistExecutor.safeRunForDist(() -> SideProxy.Client::new, () -> SideProxy.Server::new);
 	}
