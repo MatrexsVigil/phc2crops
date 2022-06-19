@@ -13,7 +13,7 @@ import pam.pamhc2crops.worldgen.configs.FeatureConfigs;
 
 public class FeatureRegistry {
 
-	/*public static ConfiguredFeature<?, ?> ARID_GARDEN = newConfiguredFeature("arid_garden", Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.ARID_GARDEN_CONFIG)
+	public static ConfiguredFeature<?, ?> ARID_GARDEN = newConfiguredFeature("arid_garden", Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.ARID_GARDEN_CONFIG)
     		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
 	
 	public static ConfiguredFeature<?, ?> FROST_GARDEN = newConfiguredFeature("frost_garden", Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.FROST_GARDEN_CONFIG)
@@ -48,5 +48,5 @@ public class FeatureRegistry {
         Registry.register(registry, new ResourceLocation(Pamhc2crops.MOD_ID, "windy_garden"), WINDY_GARDEN);
         
         
-	} */
+	}
 }

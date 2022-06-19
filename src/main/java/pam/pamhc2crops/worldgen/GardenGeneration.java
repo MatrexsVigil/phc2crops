@@ -6,6 +6,7 @@ import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import pam.pamhc2crops.config.EnableConfig;
+import pam.pamhc2crops.init.FeatureRegistry;
 
 public final class GardenGeneration {
     
@@ -67,28 +68,26 @@ public final class GardenGeneration {
     }
 
     private static void addAridGarden(BiomeLoadingEvent biome) {
-        biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.ARID_GARDEN);
+        biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FeatureRegistry.ARID_GARDEN);
     }
     
     private static void addFrostGarden(BiomeLoadingEvent biome) {
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.FROST_GARDEN);
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FeatureRegistry.FROST_GARDEN);
     }
     
     private static void addShadedGarden(BiomeLoadingEvent biome) {
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.SHADED_GARDEN);
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FeatureRegistry.SHADED_GARDEN);
     }
 
     private static void addSoggyGarden(BiomeLoadingEvent biome) {
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.SOGGY_GARDEN);
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FeatureRegistry.SOGGY_GARDEN);
     }
 
     private static void addTropicalGarden(BiomeLoadingEvent biome) {
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.TROPICAL_GARDEN);
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FeatureRegistry.TROPICAL_GARDEN);
     }
     
     private static void addWindyGarden(BiomeLoadingEvent biome) {
-    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, PamConfiguredFeatures.WINDY_GARDEN);
+    	biome.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FeatureRegistry.WINDY_GARDEN);
     }
 }
-© 2020 GitHub, Inc.
-Terms
