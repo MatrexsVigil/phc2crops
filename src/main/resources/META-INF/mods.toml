@@ -16,7 +16,7 @@ Pam's HarvestCraft 2 Crops adds all new crops to the game
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="[33,)" #mandatory
+    versionRange="[40,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
@@ -25,6 +25,6 @@ Pam's HarvestCraft 2 Crops adds all new crops to the game
 [[dependencies.pamhc2crops]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3]"
+    versionRange="[1.18.2]"
     ordering="NONE"
     side="BOTH"
