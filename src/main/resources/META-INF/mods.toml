@@ -3,7 +3,7 @@ loaderVersion="[33,)" #mandatory (28 is current forge version)
 license="All rights reserved"
 [[mods]] #mandatory
 modId="pamhc2crops" #mandatory
-version="${version}" #mandatory
+version="${file.jarVersion}" #mandatory
 displayName="Pam's HarvestCraft 2 Crops" #mandatory
 description='''
 Pam's HarvestCraft 2 Crops adds all new crops to the game
