@@ -7,7 +7,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import pam.pamhc2crops.Pamhc2crops;
 import pam.pamhc2crops.blocks.BlockPamAridGarden;
 import pam.pamhc2crops.blocks.BlockPamCrop;
@@ -17,284 +20,272 @@ import javax.annotation.Nullable;
 
 public class BlockRegistry {
 
-	public static Block pamagavecrop;
-	public static Block pamamaranthcrop;
-	public static Block pamarrowrootcrop;
-	public static Block pamartichokecrop;
-	public static Block pamasparaguscrop;
-	public static Block pambarleycrop;
-	public static Block pambeancrop;
-	public static Block pambellpeppercrop;
-	public static Block pamblackberrycrop;
-	public static Block pamblueberrycrop;
-	public static Block pambroccolicrop;
-	public static Block pambrusselsproutcrop;
-	public static Block pamcabbagecrop;
-	public static Block pamcactusfruitcrop;
-	public static Block pamcandleberrycrop;
-	public static Block pamcantaloupecrop;
-	public static Block pamcassavacrop;
-	public static Block pamcauliflowercrop;
-	public static Block pamcelerycrop;
-	public static Block pamchickpeacrop;
-	public static Block pamchilipeppercrop;
-	public static Block pamcoffeebeancrop;
-	public static Block pamcorncrop;
-	public static Block pamcottoncrop;
-	public static Block pamcranberrycrop;
-	public static Block pamcucumbercrop;
-	public static Block pameggplantcrop;
-	public static Block pamelderberrycrop;
-	public static Block pamflaxcrop;
-	public static Block pamgarliccrop;
-	public static Block pamgingercrop;
-	public static Block pamgrapecrop;
-	public static Block pamgreengrapecrop;
-	public static Block pamhuckleberrycrop;
-	public static Block pamjicamacrop;
-	public static Block pamjuniperberrycrop;
-	public static Block pamjutecrop;
-	public static Block pamkalecrop;
-	public static Block pamkenafcrop;
-	public static Block pamkiwicrop;
-	public static Block pamkohlrabicrop;
-	public static Block pamleekcrop;
-	public static Block pamlentilcrop;
-	public static Block pamlettucecrop;
-	public static Block pammilletcrop;
-	public static Block pammulberrycrop;
-	public static Block pammustardseedscrop;
-	public static Block pamoatscrop;
-	public static Block pamokracrop;
-	public static Block pamonioncrop;
-	public static Block pamparsnipcrop;
-	public static Block pampeanutcrop;
-	public static Block pampeascrop;
-	public static Block pampineapplecrop;
-	public static Block pamquinoacrop;
-	public static Block pamradishcrop;
-	public static Block pamraspberrycrop;
-	public static Block pamrhubarbcrop;
-	public static Block pamricecrop;
-	public static Block pamrutabagacrop;
-	public static Block pamryecrop;
-	public static Block pamscallioncrop;
-	public static Block pamsesameseedscrop;
-	public static Block pamsisalcrop;
-	public static Block pamsoybeancrop;
-	public static Block pamspiceleafcrop;
-	public static Block pamspinachcrop;
-	public static Block pamstrawberrycrop;
-	public static Block pamsweetpotatocrop;
-	public static Block pamtarocrop;
-	public static Block pamtealeafcrop;
-	public static Block pamtomatillocrop;
-	public static Block pamtomatocrop;
-	public static Block pamturnipcrop;
-	public static Block pamwaterchestnutcrop;
-	public static Block pamwhitemushroomcrop;
-	public static Block pamwintersquashcrop;
-	public static Block pamzucchinicrop;
-	
-	public static Block aridgarden;
-	public static Block frostgarden;
-	public static Block tropicalgarden;
-	public static Block windygarden;
-	public static Block shadedgarden;
-	public static Block soggygarden;
-	
-	public static void registerAll(RegistryEvent.Register<Block> event) {
-		if (!event.getName().equals(ForgeRegistries.BLOCKS.getRegistryName()))
-			return;
+	public static RegistryObject<Block> pamagavecrop;
+	public static RegistryObject<Block> pamamaranthcrop;
+	public static RegistryObject<Block> pamarrowrootcrop;
+	public static RegistryObject<Block> pamartichokecrop;
+	public static RegistryObject<Block> pamasparaguscrop;
+	public static RegistryObject<Block> pambarleycrop;
+	public static RegistryObject<Block> pambeancrop;
+	public static RegistryObject<Block> pambellpeppercrop;
+	public static RegistryObject<Block> pamblackberrycrop;
+	public static RegistryObject<Block> pamblueberrycrop;
+	public static RegistryObject<Block> pambroccolicrop;
+	public static RegistryObject<Block> pambrusselsproutcrop;
+	public static RegistryObject<Block> pamcabbagecrop;
+	public static RegistryObject<Block> pamcactusfruitcrop;
+	public static RegistryObject<Block> pamcandleberrycrop;
+	public static RegistryObject<Block> pamcantaloupecrop;
+	public static RegistryObject<Block> pamcassavacrop;
+	public static RegistryObject<Block> pamcauliflowercrop;
+	public static RegistryObject<Block> pamcelerycrop;
+	public static RegistryObject<Block> pamchickpeacrop;
+	public static RegistryObject<Block> pamchilipeppercrop;
+	public static RegistryObject<Block> pamcoffeebeancrop;
+	public static RegistryObject<Block> pamcorncrop;
+	public static RegistryObject<Block> pamcottoncrop;
+	public static RegistryObject<Block> pamcranberrycrop;
+	public static RegistryObject<Block> pamcucumbercrop;
+	public static RegistryObject<Block> pameggplantcrop;
+	public static RegistryObject<Block> pamelderberrycrop;
+	public static RegistryObject<Block> pamflaxcrop;
+	public static RegistryObject<Block> pamgarliccrop;
+	public static RegistryObject<Block> pamgingercrop;
+	public static RegistryObject<Block> pamgrapecrop;
+	public static RegistryObject<Block> pamgreengrapecrop;
+	public static RegistryObject<Block> pamhuckleberrycrop;
+	public static RegistryObject<Block> pamjicamacrop;
+	public static RegistryObject<Block> pamjuniperberrycrop;
+	public static RegistryObject<Block> pamjutecrop;
+	public static RegistryObject<Block> pamkalecrop;
+	public static RegistryObject<Block> pamkenafcrop;
+	public static RegistryObject<Block> pamkiwicrop;
+	public static RegistryObject<Block> pamkohlrabicrop;
+	public static RegistryObject<Block> pamleekcrop;
+	public static RegistryObject<Block> pamlentilcrop;
+	public static RegistryObject<Block> pamlettucecrop;
+	public static RegistryObject<Block> pammilletcrop;
+	public static RegistryObject<Block> pammulberrycrop;
+	public static RegistryObject<Block> pammustardseedscrop;
+	public static RegistryObject<Block> pamoatscrop;
+	public static RegistryObject<Block> pamokracrop;
+	public static RegistryObject<Block> pamonioncrop;
+	public static RegistryObject<Block> pamparsnipcrop;
+	public static RegistryObject<Block> pampeanutcrop;
+	public static RegistryObject<Block> pampeascrop;
+	public static RegistryObject<Block> pampineapplecrop;
+	public static RegistryObject<Block> pamquinoacrop;
+	public static RegistryObject<Block> pamradishcrop;
+	public static RegistryObject<Block> pamraspberrycrop;
+	public static RegistryObject<Block> pamrhubarbcrop;
+	public static RegistryObject<Block> pamricecrop;
+	public static RegistryObject<Block> pamrutabagacrop;
+	public static RegistryObject<Block> pamryecrop;
+	public static RegistryObject<Block> pamscallioncrop;
+	public static RegistryObject<Block> pamsesameseedscrop;
+	public static RegistryObject<Block> pamsisalcrop;
+	public static RegistryObject<Block> pamsoybeancrop;
+	public static RegistryObject<Block> pamspiceleafcrop;
+	public static RegistryObject<Block> pamspinachcrop;
+	public static RegistryObject<Block> pamstrawberrycrop;
+	public static RegistryObject<Block> pamsweetpotatocrop;
+	public static RegistryObject<Block> pamtarocrop;
+	public static RegistryObject<Block> pamtealeafcrop;
+	public static RegistryObject<Block> pamtomatillocrop;
+	public static RegistryObject<Block> pamtomatocrop;
+	public static RegistryObject<Block> pamturnipcrop;
+	public static RegistryObject<Block> pamwaterchestnutcrop;
+	public static RegistryObject<Block> pamwhitemushroomcrop;
+	public static RegistryObject<Block> pamwintersquashcrop;
+	public static RegistryObject<Block> pamzucchinicrop;
 
-			pamagavecrop = register("pamagavecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+	public static RegistryObject<Block> aridgarden;
+	public static RegistryObject<Block> frostgarden;
+	public static RegistryObject<Block> tropicalgarden;
+	public static RegistryObject<Block> windygarden;
+	public static RegistryObject<Block> shadedgarden;
+	public static RegistryObject<Block> soggygarden;
+	
+	public static void registerAll(IEventBus eventBus) {
+		DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Pamhc2crops.MOD_ID);
+
+			pamagavecrop = BLOCKS.register("pamagavecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "agave"));
-			pamamaranthcrop = register("pamamaranthcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamamaranthcrop = BLOCKS.register("pamamaranthcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "amaranth"));
-			pamarrowrootcrop = register("pamarrowrootcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamarrowrootcrop = BLOCKS.register("pamarrowrootcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "arrowroot"));
-			pamartichokecrop = register("pamartichokecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamartichokecrop = BLOCKS.register("pamartichokecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "artichoke"));
-			pamasparaguscrop = register("pamasparaguscrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamasparaguscrop = BLOCKS.register("pamasparaguscrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "asparagus"));
-			pambarleycrop = register("pambarleycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pambarleycrop = BLOCKS.register("pambarleycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "barley"));
-			pambeancrop = register("pambeancrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pambeancrop = BLOCKS.register("pambeancrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "bean"));
-			pambellpeppercrop = register("pambellpeppercrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pambellpeppercrop = BLOCKS.register("pambellpeppercrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "bellpepper"));
-			pamblackberrycrop = register("pamblackberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamblackberrycrop = BLOCKS.register("pamblackberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "blackberry"));
-			pamblueberrycrop = register("pamblueberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamblueberrycrop = BLOCKS.register("pamblueberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "blueberry"));
-			pambroccolicrop = register("pambroccolicrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pambroccolicrop = BLOCKS.register("pambroccolicrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "broccoli"));
-			pambrusselsproutcrop = register("pambrusselsproutcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pambrusselsproutcrop = BLOCKS.register("pambrusselsproutcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "brusselsprout"));
-			pamcabbagecrop = register("pamcabbagecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcabbagecrop = BLOCKS.register("pamcabbagecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "cabbage"));
-			pamcactusfruitcrop = register("pamcactusfruitcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcactusfruitcrop = BLOCKS.register("pamcactusfruitcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "cactusfruit"));
-			pamcandleberrycrop = register("pamcandleberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcandleberrycrop = BLOCKS.register("pamcandleberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "candleberry"));
-			pamcantaloupecrop = register("pamcantaloupecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcantaloupecrop = BLOCKS.register("pamcantaloupecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "cantaloupe"));
-			pamcassavacrop = register("pamcassavacrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcassavacrop = BLOCKS.register("pamcassavacrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "cassava"));
-			pamcauliflowercrop = register("pamcauliflowercrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcauliflowercrop = BLOCKS.register("pamcauliflowercrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "cauliflower"));
-			pamcelerycrop = register("pamcelerycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcelerycrop = BLOCKS.register("pamcelerycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "celery"));
-			pamchickpeacrop = register("pamchickpeacrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamchickpeacrop = BLOCKS.register("pamchickpeacrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "chilipepper"));
-			pamchilipeppercrop = register("pamchilipeppercrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamchilipeppercrop = BLOCKS.register("pamchilipeppercrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "chilipepper"));
-			pamcoffeebeancrop = register("pamcoffeebeancrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcoffeebeancrop = BLOCKS.register("pamcoffeebeancrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "coffeebean"));
-			pamcorncrop = register("pamcorncrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcorncrop = BLOCKS.register("pamcorncrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "corn"));
-			pamcottoncrop = register("pamcottoncrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcottoncrop = BLOCKS.register("pamcottoncrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "cotton"));
-			pamcranberrycrop = register("pamcranberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcranberrycrop = BLOCKS.register("pamcranberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "cranberry"));
-			pamcucumbercrop = register("pamcucumbercrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamcucumbercrop = BLOCKS.register("pamcucumbercrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "cucumber"));
-			pameggplantcrop = register("pameggplantcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pameggplantcrop = BLOCKS.register("pameggplantcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "eggplant"));
-			pamelderberrycrop = register("pamelderberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamelderberrycrop = BLOCKS.register("pamelderberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "elderberry"));
-			pamflaxcrop = register("pamflaxcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamflaxcrop = BLOCKS.register("pamflaxcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "flax"));
-			pamgarliccrop = register("pamgarliccrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamgarliccrop = BLOCKS.register("pamgarliccrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "garlic"));
-			pamgingercrop = register("pamgingercrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamgingercrop = BLOCKS.register("pamgingercrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "ginger"));
-			pamgrapecrop = register("pamgrapecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamgrapecrop = BLOCKS.register("pamgrapecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "grape"));
-			pamgreengrapecrop = register("pamgreengrapecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamgreengrapecrop = BLOCKS.register("pamgreengrapecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "greengrape"));
-			pamhuckleberrycrop = register("pamhuckleberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamhuckleberrycrop = BLOCKS.register("pamhuckleberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "huckleberry"));
-			pamjicamacrop = register("pamjicamacrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamjicamacrop = BLOCKS.register("pamjicamacrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "jicama"));
-			pamjuniperberrycrop = register("pamjuniperberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamjuniperberrycrop = BLOCKS.register("pamjuniperberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "juniperberry"));
-			pamjutecrop = register("pamjutecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamjutecrop = BLOCKS.register("pamjutecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "jute"));
-			pamkalecrop = register("pamkalecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamkalecrop = BLOCKS.register("pamkalecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "kale"));
-			pamkenafcrop = register("pamkenafcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamkenafcrop = BLOCKS.register("pamkenafcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "kenaf"));
-			pamkiwicrop = register("pamkiwicrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamkiwicrop = BLOCKS.register("pamkiwicrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "kiwi"));
-			pamkohlrabicrop = register("pamkohlrabicrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamkohlrabicrop = BLOCKS.register("pamkohlrabicrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "kohlrabi"));
-			pamleekcrop = register("pamleekcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamleekcrop = BLOCKS.register("pamleekcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "leek"));
-			pamlentilcrop = register("pamlentilcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamlentilcrop = BLOCKS.register("pamlentilcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "lentil"));
-			pamlettucecrop = register("pamlettucecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamlettucecrop = BLOCKS.register("pamlettucecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "lettuce"));
-			pammilletcrop = register("pammilletcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pammilletcrop = BLOCKS.register("pammilletcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "millet"));
-			pammulberrycrop = register("pammulberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pammulberrycrop = BLOCKS.register("pammulberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "mulberry"));
-			pammustardseedscrop = register("pammustardseedscrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pammustardseedscrop = BLOCKS.register("pammustardseedscrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "mustardseeds"));
-			pamoatscrop = register("pamoatscrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamoatscrop = BLOCKS.register("pamoatscrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "oats"));
-			pamokracrop = register("pamokracrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamokracrop = BLOCKS.register("pamokracrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "okra"));
-			pamonioncrop = register("pamonioncrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamonioncrop = BLOCKS.register("pamonioncrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "onion"));
-			pamparsnipcrop = register("pamparsnipcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamparsnipcrop = BLOCKS.register("pamparsnipcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "parsnip"));
-			pampeanutcrop = register("pampeanutcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pampeanutcrop = BLOCKS.register("pampeanutcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "peanut"));
-			pampeascrop = register("pampeascrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pampeascrop = BLOCKS.register("pampeascrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "peas"));
-			pampineapplecrop = register("pampineapplecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pampineapplecrop = BLOCKS.register("pampineapplecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "pineapple"));
-			pamquinoacrop = register("pamquinoacrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamquinoacrop = BLOCKS.register("pamquinoacrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "quinoa"));
-			pamradishcrop = register("pamradishcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamradishcrop = BLOCKS.register("pamradishcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "radish"));
-			pamraspberrycrop = register("pamraspberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamraspberrycrop = BLOCKS.register("pamraspberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "raspberry"));
-			pamrhubarbcrop = register("pamrhubarbcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamrhubarbcrop = BLOCKS.register("pamrhubarbcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "rhubarb"));
-			pamricecrop = register("pamricecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamricecrop = BLOCKS.register("pamricecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "rice"));
-			pamrutabagacrop = register("pamrutabagacrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamrutabagacrop = BLOCKS.register("pamrutabagacrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "rutabaga"));
-			pamryecrop = register("pamryecrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamryecrop = BLOCKS.register("pamryecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "rye"));
-			pamscallioncrop = register("pamscallioncrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamscallioncrop = BLOCKS.register("pamscallioncrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "scallion"));
-			pamsesameseedscrop = register("pamsesameseedscrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamsesameseedscrop = BLOCKS.register("pamsesameseedscrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "sesameseeds"));
-			pamsisalcrop = register("pamsisalcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamsisalcrop = BLOCKS.register("pamsisalcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "sisal"));
-			pamsoybeancrop = register("pamsoybeancrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamsoybeancrop = BLOCKS.register("pamsoybeancrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "soybean"));
-			pamspiceleafcrop = register("pamspiceleafcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamspiceleafcrop = BLOCKS.register("pamspiceleafcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "spiceleaf"));
-			pamspinachcrop = register("pamspinachcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamspinachcrop = BLOCKS.register("pamspinachcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "spinach"));
-			pamstrawberrycrop = register("pamstrawberrycrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamstrawberrycrop = BLOCKS.register("pamstrawberrycrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "strawberry"));
-			pamsweetpotatocrop = register("pamsweetpotatocrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamsweetpotatocrop = BLOCKS.register("pamsweetpotatocrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "sweetpotato"));
-			pamtarocrop = register("pamtarocrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamtarocrop = BLOCKS.register("pamtarocrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "taro"));
-			pamtealeafcrop = register("pamtealeafcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamtealeafcrop = BLOCKS.register("pamtealeafcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "tealeaf"));
-			pamtomatillocrop = register("pamtomatillocrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamtomatillocrop = BLOCKS.register("pamtomatillocrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "tomatillo"));
-			pamtomatocrop = register("pamtomatocrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamtomatocrop = BLOCKS.register("pamtomatocrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "tomato"));
-			pamturnipcrop = register("pamturnipcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamturnipcrop = BLOCKS.register("pamturnipcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "turnip"));
-			pamwaterchestnutcrop = register("pamwaterchestnutcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamwaterchestnutcrop = BLOCKS.register("pamwaterchestnutcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "waterchestnut"));
-			pamwhitemushroomcrop = register("pamwhitemushroomcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamwhitemushroomcrop = BLOCKS.register("pamwhitemushroomcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "whitemushroom"));
-			pamwintersquashcrop = register("pamwintersquashcrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamwintersquashcrop = BLOCKS.register("pamwintersquashcrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "wintersquash"));
-			pamzucchinicrop = register("pamzucchinicrop", new BlockPamCrop(Block.Properties.of(Material.PLANT)
+			pamzucchinicrop = BLOCKS.register("pamzucchinicrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "zucchini"));
-			
-			aridgarden = register("aridgarden", new BlockPamAridGarden(Block.Properties.of(Material.PLANT)
+
+			aridgarden = BLOCKS.register("aridgarden", () -> new BlockPamAridGarden(Block.Properties.of(Material.PLANT)
 					.noCollission().strength(0).sound(SoundType.CROP), "aridgarden"));
-			frostgarden = register("frostgarden", new BlockPamGarden(Block.Properties.of(Material.PLANT)
+			frostgarden = BLOCKS.register("frostgarden", () -> new BlockPamGarden(Block.Properties.of(Material.PLANT)
 					.noCollission().strength(0).sound(SoundType.CROP), "frostgarden"));
-			tropicalgarden = register("tropicalgarden", new BlockPamGarden(Block.Properties.of(Material.PLANT)
+			tropicalgarden = BLOCKS.register("tropicalgarden", () -> new BlockPamGarden(Block.Properties.of(Material.PLANT)
 					.noCollission().strength(0).sound(SoundType.CROP), "tropicalgarden"));
-			windygarden = register("windygarden", new BlockPamGarden(Block.Properties.of(Material.PLANT)
+			windygarden = BLOCKS.register("windygarden", () -> new BlockPamGarden(Block.Properties.of(Material.PLANT)
 					.noCollission().strength(0).sound(SoundType.CROP), "windygarden"));
-			shadedgarden = register("shadedgarden", new BlockPamGarden(Block.Properties.of(Material.PLANT)
+			shadedgarden = BLOCKS.register("shadedgarden", () -> new BlockPamGarden(Block.Properties.of(Material.PLANT)
 					.noCollission().strength(0).sound(SoundType.CROP), "shadedgarden"));
-			soggygarden = register("soggygarden", new BlockPamGarden(Block.Properties.of(Material.PLANT)
+			soggygarden = BLOCKS.register("soggygarden", () -> new BlockPamGarden(Block.Properties.of(Material.PLANT)
 					.noCollission().strength(0).sound(SoundType.CROP), "soggygarden"));
-			
-			
-			
-	}
-	
-	
 
-	private static <T extends Block> T register(String name, T block) {
-		BlockItem item = new BlockItem(block, new Item.Properties().tab(Pamhc2crops.ITEM_GROUP));
-		return register(name, block, item);
-	}
-	
+		BLOCKS.register(eventBus);
 
-	private static <T extends Block> T register(String name, T block, @Nullable BlockItem item) {
-		ResourceLocation id = Pamhc2crops.getId(name);
-		block.setRegistryName(id);
-		ForgeRegistries.BLOCKS.register(block);
-		return block;
 	}
+
+
+
+
 	
 
 }
