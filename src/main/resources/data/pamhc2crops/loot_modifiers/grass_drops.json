@@ -1,0 +1,332 @@
+{
+	"conditions": [
+		{
+			"condition": "minecraft:block_state_property",
+			"block": "minecraft:grass"
+		},
+		{
+			"condition": "minecraft:random_chance",
+			"chance": 0.0625
+		}
+	],
+	"functions": [
+		{
+			"function": "minecraft:apply_bonus",
+			"enchantment": "minecraft:fortune",
+			"formula": "minecraft:uniform_bonus_count",
+			"parameters": {
+				"bonusMultiplier": 2
+			}
+		},
+		{
+			"function": "minecraft:explosion_decay"
+		}
+	],
+	"entries": [
+		{
+			"name": "pamhc2crops:agaveseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:amaranthseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:arrowrootseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:artichokeseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:asparagusseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:barleyseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:beanseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:bellpepperseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:blackberryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:broccoliseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:brusselsproutseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:cabbageseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:cactusfruitseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:candleberryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:cantaloupeseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:cassavaseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:cauliflowerseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:celeryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:chickpeaseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:chilipepperseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:coffeebeanseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:cornseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:cranberryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:cucumberseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:eggplantseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:elderberryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:flaxseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:garlicseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:gingerseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:grapeseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:greengrapeseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:huckleberryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:jicamaseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:juniperberryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:juteseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:kaleseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:kenafseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:kiwiseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:kohlrabiseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:leekseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:lentilseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:lettuceseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:milletseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:mulberryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:mustardseedsseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:oatsseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:okraseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:onionseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:parsnipseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:peanutseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:peasseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:pineappleseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:quinoaseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:radishseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:raspberryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:rhubarbseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:riceseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:rutabagaseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:ryeseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:scallionseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:sesameseedsseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:sisalseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:soybeanseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:spiceleafseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:spinachseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:strawberryseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:sweetpotatoseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:taroseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:tealeafseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:tomatilloseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:tomatoseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:turnipseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:waterchestnutseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:whitemushroomseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:wintersquashseeditem",
+			"weight": 1
+		},
+		{
+			"name": "pamhc2crops:zucchiniseeditem",
+			"weight": 1
+		}
+	],
+	"type": "pamhc2crops:grass_drops"
+}
