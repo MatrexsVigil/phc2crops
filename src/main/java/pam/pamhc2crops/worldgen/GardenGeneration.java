@@ -17,10 +17,7 @@ public final class GardenGeneration {
     private GardenGeneration() {}
 
     public static void addFeaturesToBiomes(BiomeLoadingEvent biome) {
-		ResourceKey<Biome> key = ResourceKey.create(Registry.BIOME_REGISTRY, biome.getName());
-		Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
-
-
+        
     	if (biome.getCategory() == Biome.BiomeCategory.DESERT || biome.getCategory() == Biome.BiomeCategory.MESA) {
     		if (EnableConfig.enable_aridgarden.get())
     		{
