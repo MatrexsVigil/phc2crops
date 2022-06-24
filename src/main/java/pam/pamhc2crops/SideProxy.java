@@ -27,7 +27,7 @@ public class SideProxy {
 		eventBus.addListener(SideProxy::processIMC);
 		BlockRegistry.registerAll(eventBus);
 
-		FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Item.class, ItemRegistry::registerAll);
+		ItemRegistry.registerAll(eventBus);
 
 		
 		Config.loadConfig(Config.CONFIG, FMLPaths.CONFIGDIR.get().resolve("pamhc2crops.toml").toString());

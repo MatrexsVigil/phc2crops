@@ -21,7 +21,7 @@ public class Pamhc2crops {
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static final CreativeModeTab ITEM_GROUP = new CreativeModeTab("pamhc2crops") {
 		public ItemStack makeIcon() {
-			return new ItemStack(ItemRegistry.barleyitem);
+			return new ItemStack(ItemRegistry.barleyitem.get());
 		}
 
 	};
