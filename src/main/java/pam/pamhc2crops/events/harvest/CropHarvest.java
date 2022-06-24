@@ -29,7 +29,7 @@ public class CropHarvest {
 	private static final Method seedDrops;
 
 	static {
-		seedDrops = ObfuscationReflectionHelper.findMethod(CropBlock.class, "func_199772_f");
+		seedDrops = ObfuscationReflectionHelper.findMethod(CropBlock.class, "getBaseSeedId");
 	}
 
 	private Item getCropSeed(Block block) {
