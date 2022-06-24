@@ -1,52 +1,37 @@
 package pam.pamhc2crops.init;
 
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.MutableRegistry;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.WorldGenRegistries;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.Features;
-import pam.pamhc2crops.Pamhc2crops;
-import pam.pamhc2crops.config.ChanceConfig;
-import pam.pamhc2crops.worldgen.configs.FeatureConfigs;
+import net.minecraft.core.Holder;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraftforge.registries.RegistryObject;
+import pam.pamhc2crops.config.ClusterConfig;
 
 public class FeatureRegistry {
 
-	public static ConfiguredFeature<?, ?> ARID_GARDEN = newConfiguredFeature("arid_garden", Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.ARID_GARDEN_CONFIG)
-    		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
-	
-	public static ConfiguredFeature<?, ?> FROST_GARDEN = newConfiguredFeature("frost_garden", Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.FROST_GARDEN_CONFIG)
-    		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
-	
-	public static ConfiguredFeature<?, ?> SHADED_GARDEN = newConfiguredFeature("shaded_garden", Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.SHADED_GARDEN_CONFIG)
-    		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
-	
-	public static ConfiguredFeature<?, ?> SOGGY_GARDEN = newConfiguredFeature("soggy_garden", Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.SOGGY_GARDEN_CONFIG)
-    		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
-	
-	public static ConfiguredFeature<?, ?> TROPICAL_GARDEN = newConfiguredFeature("tropical_garden", Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.TROPICAL_GARDEN_CONFIG)
-    		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
-	
-	public static ConfiguredFeature<?, ?> WINDY_GARDEN = newConfiguredFeature("windy_garden", Feature.RANDOM_PATCH.withConfiguration(FeatureConfigs.WINDY_GARDEN_CONFIG)
-    		.withPlacement(Features.Placements.HEIGHTMAP_SPREAD_DOUBLE_PLACEMENT).func_242729_a(ChanceConfig.garden_chance.get()));
-	
-	public static ConfiguredFeature<?, ?> newConfiguredFeature(String registryName, ConfiguredFeature<?, ?> configuredFeature) {
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(Pamhc2crops.MOD_ID, registryName), configuredFeature);
-        return configuredFeature;
+	public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> ARID_GARDEN = newConfiguredFeature("arid_garden", BlockRegistry.aridgarden);
+
+	public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FROST_GARDEN = newConfiguredFeature("frost_garden", BlockRegistry.frostgarden);
+
+	public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> SHADED_GARDEN = newConfiguredFeature("shaded_garden", BlockRegistry.shadedgarden);
+
+	public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> SOGGY_GARDEN = newConfiguredFeature("soggy_garden", BlockRegistry.soggygarden);
+
+	public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> TROPICAL_GARDEN = newConfiguredFeature("tropical_garden", BlockRegistry.tropicalgarden);
+
+	public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> WINDY_GARDEN = newConfiguredFeature("windy_garden", BlockRegistry.windygarden);
+
+	public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> newConfiguredFeature(String registryName, RegistryObject<Block> garden) {
+		SimpleBlockConfiguration blockConfig = new SimpleBlockConfiguration(BlockStateProvider.simple(garden.get()));
+		Holder<PlacedFeature> onlyWhenEmptyHolder = PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, blockConfig);
+		RandomPatchConfiguration patchConfig = FeatureUtils.simpleRandomPatchConfiguration(ClusterConfig.garden_cluster_amount.get(), onlyWhenEmptyHolder);
+
+        return FeatureUtils.register(registryName, Feature.RANDOM_PATCH, patchConfig);
     }
-	
-	public static void registerConfiguredFeatures() {
-        MutableRegistry<ConfiguredFeature<?, ?>> registry = (MutableRegistry<ConfiguredFeature<?, ?>>) WorldGenRegistries.CONFIGURED_FEATURE;
-        
-        Registry.register(registry, new ResourceLocation(Pamhc2crops.MOD_ID, "arid_garden"), ARID_GARDEN);
-        
-        Registry.register(registry, new ResourceLocation(Pamhc2crops.MOD_ID, "frost_garden"), FROST_GARDEN);
-        Registry.register(registry, new ResourceLocation(Pamhc2crops.MOD_ID, "shaded_garden"), SHADED_GARDEN);
-        Registry.register(registry, new ResourceLocation(Pamhc2crops.MOD_ID, "soggy_garden"), SOGGY_GARDEN);
-        Registry.register(registry, new ResourceLocation(Pamhc2crops.MOD_ID, "tropical_garden"), TROPICAL_GARDEN);
-        Registry.register(registry, new ResourceLocation(Pamhc2crops.MOD_ID, "windy_garden"), WINDY_GARDEN);
-        
-        
-	}
 }

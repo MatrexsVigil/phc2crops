@@ -1,14 +1,13 @@
 package pam.pamhc2crops;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.*;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import pam.pamhc2crops.config.Config;
@@ -21,15 +20,14 @@ import pam.pamhc2crops.worldgen.GardenGeneration;
 
 public class SideProxy {
 	SideProxy() {
-		
+		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.CONFIG, "pamhc2crops.toml");
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(SideProxy::commonSetup);
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(SideProxy::enqueueIMC);
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(SideProxy::processIMC);
-		FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Block.class, BlockRegistry::registerAll);
-		
+		eventBus.addListener(SideProxy::commonSetup);
+		eventBus.addListener(SideProxy::enqueueIMC);
+		eventBus.addListener(SideProxy::processIMC);
+		BlockRegistry.registerAll(eventBus);
+
 		FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Item.class, ItemRegistry::registerAll);
-		FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Placement.class, GardenGeneration::registerPlacements);
 
 		
 		Config.loadConfig(Config.CONFIG, FMLPaths.CONFIGDIR.get().resolve("pamhc2crops.toml").toString());
@@ -57,7 +55,7 @@ public class SideProxy {
 	private static void processIMC(final InterModProcessEvent event) {
 	}
 
-	private static void serverStarting(FMLServerStartingEvent event) {
+	private static void serverStarting(ServerStartingEvent event) {
 	}
 
 	static class Client extends SideProxy {
@@ -76,7 +74,7 @@ public class SideProxy {
 			FMLJavaModLoadingContext.get().getModEventBus().addListener(Server::serverSetup);
 		}
 
-		private static void serverSetup(FMLDedicatedServerSetupEvent event) {
+		private static void serverSetup(ServerStartingEvent event) {
 		}
 	}
 
