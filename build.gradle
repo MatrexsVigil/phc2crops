@@ -1,5 +1,5 @@
 // @file build.gradle
-// pamhc2crops mod gradle build relay (mc1.14.4)
+// pamhc2crops mod gradle build relay (mc1.16.3)
 buildscript {
   repositories {
     maven { url = 'https://files.minecraftforge.net/maven' }
@@ -29,14 +29,24 @@ minecraft {
   mappings channel: 'snapshot', version: "${version_fml_mappings}"
   // accessTransformer = file('build/resources/main/META-INF/accesstransformer.cfg')
   runs {
+//    client {
+//				workingDirectory project.file('run')
+//				property 'forge.logging.markers', ''
+//				property 'forge.logging.console.level', 'debug'
+//				property 'forge.logging.noansi', "false"
+//
+//				environment 'MOD_CLASSES', "${project.file("bin/default").canonicalPath}"
+//    }
     client {
-				workingDirectory project.file('run')
-				property 'forge.logging.markers', ''
-				property 'forge.logging.console.level', 'debug'
-				property 'forge.logging.noansi', "false"
+      workingDirectory project.file('run')
+      property 'forge.logging.console.level', 'debug'
 
-				environment 'MOD_CLASSES', "${project.file("bin/default").canonicalPath}"
-}
+      mods {
+        pamhc2crops {
+          source sourceSets.main
+        }
+      }
+    }
     server {
       workingDirectory project.file('run')
       property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -63,8 +73,7 @@ minecraft {
  
 dependencies {
   minecraft "net.minecraftforge:forge:${version_forge_minecraft}"
-  compileOnly fg.deobf("mezz.jei:jei-${version_jei}:api")
-  runtimeOnly fg.deobf("mezz.jei:jei-${version_jei}")
+
 }
  
 processResources {

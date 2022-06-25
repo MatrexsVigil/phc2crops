@@ -6,11 +6,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import pam.pamhc2crops.Pamhc2crops;
-import pam.pamhc2crops.items.ItemPamFoodSeed;
-import pam.pamhc2crops.items.ItemPamGrain;
-import pam.pamhc2crops.items.ItemPamPig;
-import pam.pamhc2crops.items.ItemPamRabbit;
-import pam.pamhc2crops.items.ItemPamSeed;
+import pam.pamhc2crops.items.*;
 
 public class ItemRegistry {
 

@@ -1,16 +1,19 @@
 package pam.pamhc2crops;
 
-import javax.annotation.Nonnull;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import pam.pamhc2crops.init.ItemRegistry;
+import pam.pamhc2crops.worldgen.GardenGeneration;
+import pam.pamhc2crops.worldgen.PamConfiguredFeatures;
+
+import javax.annotation.Nonnull;
 
 @Mod("pamhc2crops")
 public class Pamhc2crops {
@@ -24,7 +27,13 @@ public class Pamhc2crops {
 	};
 
 	public Pamhc2crops() {
-		DistExecutor.runForDist(() -> () -> new SideProxy.Client(), () -> () -> new SideProxy.Server());
+		// Done here to just get them working lol.
+		// You can move them to where the belong on your proxies if you prefer them there
+		FMLJavaModLoadingContext.get().getModEventBus().addListener(PamConfiguredFeatures::registerConfiguredFeatures);
+		MinecraftForge.EVENT_BUS.addListener(GardenGeneration::addFeaturesToBiomes);
+
+		// Cleaned up proxies and swapped depreciated method for safeRunForDist
+		DistExecutor.safeRunForDist(() -> SideProxy.Client::new, () -> SideProxy.Server::new);
 	}
 
 	@Nonnull
