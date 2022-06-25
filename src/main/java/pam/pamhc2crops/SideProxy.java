@@ -71,7 +71,7 @@ public class SideProxy {
 
 	static class Server extends SideProxy {
 		Server() {
-			FMLJavaModLoadingContext.get().getModEventBus().addListener(Server::serverSetup);
+			MinecraftForge.EVENT_BUS.addListener(Server::serverSetup);
 		}
 
 		private static void serverSetup(ServerStartingEvent event) {
