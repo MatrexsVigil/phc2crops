@@ -1,126 +1,93 @@
 package pam.pamhc2crops.worldgen;
 
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.IFeatureConfig;
-import net.minecraft.world.gen.placement.FrequencyConfig;
-import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.packs.resources.Resource;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.BiomeDictionary;
-import pam.pamhc2crops.init.WorldGenRegistry;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import pam.pamhc2crops.config.EnableConfig;
+import pam.pamhc2crops.init.PlacedFeatureRegistry;
 
-public class GardenGeneration {
+import java.util.Set;
 
-	public static void registerWorldGen() {
+public final class GardenGeneration {
 
-		//Arid
-		if (WorldGenRegistry.arid_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.SANDY).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.arid_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+    private GardenGeneration() {}
 
-		}
-		if (WorldGenRegistry.arid_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.MESA).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.arid_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+    public static void addFeaturesToBiomes(BiomeLoadingEvent biome) {
+        
+    	if (biome.getCategory() == Biome.BiomeCategory.DESERT || biome.getCategory() == Biome.BiomeCategory.MESA) {
+    		if (EnableConfig.enable_aridgarden.get())
+    		{
+    			addAridGarden(biome);
+    		}
+    	}
 
-		}
-		//Frost
-		if (WorldGenRegistry.frost_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.SNOWY).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.frost_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+    	if (biome.getCategory() == Biome.BiomeCategory.ICY || biome.getCategory() == Biome.BiomeCategory.EXTREME_HILLS) {
+        	if (EnableConfig.enable_frostgarden.get())
+        	{
+        		addFrostGarden(biome);
+        	}
 
-		}
-		if (WorldGenRegistry.frost_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.CONIFEROUS).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.frost_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+        }
 
-		}
-		//Shaded
-		if (WorldGenRegistry.shaded_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.FOREST).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.shaded_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+    	if (biome.getCategory() == Biome.BiomeCategory.FOREST) {
+    		if (EnableConfig.enable_shadedgarden.get())
+    		{
+    			addShadedGarden(biome);
+    		}
 
-		}
-		if (WorldGenRegistry.shaded_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.HILLS).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.shaded_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+        }
 
-		}
-		if (WorldGenRegistry.shaded_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.SPOOKY).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.shaded_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+    	if (biome.getCategory() == Biome.BiomeCategory.SWAMP || biome.getCategory() == Biome.BiomeCategory.RIVER) {
+    		if (EnableConfig.enable_soggygarden.get())
+    		{
+    			addSoggyGarden(biome);
+    		}
 
-		}
-		//Soggy
-		if (WorldGenRegistry.soggy_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.SWAMP).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.soggy_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+        }
 
-		}
-		if (WorldGenRegistry.soggy_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.RIVER).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.soggy_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+    	if (biome.getCategory() == Biome.BiomeCategory.BEACH || biome.getCategory() == Biome.BiomeCategory.OCEAN) {
+    		if (EnableConfig.enable_tropicalgarden.get())
+    		{
+    			addTropicalGarden(biome);
+    		}
 
-		}
-		//Windy
-		if (WorldGenRegistry.windy_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.PLAINS).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.windy_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+        }
 
-		}
-		if (WorldGenRegistry.windy_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.SAVANNA).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.windy_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+    	if (biome.getCategory() == Biome.BiomeCategory.PLAINS || biome.getCategory() == Biome.BiomeCategory.SAVANNA) {
+    		if (EnableConfig.enable_windygarden.get())
+    		{
+    			addWindyGarden(biome);
+    		}
 
-		}
-		//Tropical
-		if (WorldGenRegistry.tropical_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.JUNGLE).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.tropical_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+        }
 
-		}
-		if (WorldGenRegistry.tropical_worldgen != null) {
-			BiomeDictionary.getBiomes(BiomeDictionary.Type.OCEAN).forEach((biome) -> {
-				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-						WorldGenRegistry.tropical_worldgen.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-						.func_227228_a_(Placement.COUNT_HEIGHTMAP.func_227446_a_(new FrequencyConfig(100))));
-			});
+    }
 
-		}
-	
-	}
-	}
+    private static void addAridGarden(BiomeLoadingEvent biome) {
+        biome.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatureRegistry.ARID_GARDEN);
+    }
+
+    private static void addFrostGarden(BiomeLoadingEvent biome) {
+    	biome.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatureRegistry.FROST_GARDEN);
+    }
+
+    private static void addShadedGarden(BiomeLoadingEvent biome) {
+    	biome.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatureRegistry.SHADED_GARDEN);
+    }
+
+    private static void addSoggyGarden(BiomeLoadingEvent biome) {
+    	biome.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatureRegistry.SOGGY_GARDEN);
+    }
+
+    private static void addTropicalGarden(BiomeLoadingEvent biome) {
+    	biome.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatureRegistry.TROPICAL_GARDEN);
+    }
+
+    private static void addWindyGarden(BiomeLoadingEvent biome) {
+    	biome.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatureRegistry.WINDY_GARDEN);
+    }
+}

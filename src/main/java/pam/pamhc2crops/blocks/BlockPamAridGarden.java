@@ -1,38 +1,38 @@
 package pam.pamhc2crops.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.BushBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.world.IBlockReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.BushBlock;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.BlockGetter;
 
 public class BlockPamAridGarden extends BushBlock{
-	protected static final VoxelShape SHAPE = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
+	protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 	private String name;
 	
-	public BlockPamAridGarden(Block.Properties p_i49971_1_, String name) {
-		super(Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0.0F));
+	public BlockPamAridGarden(Block.Properties properties, String name) {
+		super(properties);
 		this.name = name;
 		
 	}
 	
 	@Override
-	public net.minecraftforge.common.PlantType getPlantType(IBlockReader world, BlockPos pos) {
-			return net.minecraftforge.common.PlantType.Desert;
+	public net.minecraftforge.common.PlantType getPlantType(BlockGetter world, BlockPos pos) {
+			return net.minecraftforge.common.PlantType.DESERT;
 		
 	}
 
-	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+	public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 
 	public Block.OffsetType getOffsetType() {
 		return Block.OffsetType.XZ;
 	}
-
+	
+	
+	
 
 }

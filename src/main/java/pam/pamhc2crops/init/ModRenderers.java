@@ -1,0 +1,95 @@
+package pam.pamhc2crops.init;
+
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+
+public class ModRenderers {
+	public static void registerBlocks() {
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamagavecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamamaranthcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamarrowrootcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamartichokecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamasparaguscrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pambarleycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pambeancrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pambellpeppercrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamblackberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamblueberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pambroccolicrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pambrusselsproutcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcabbagecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcactusfruitcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcandleberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcantaloupecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcassavacrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcauliflowercrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcelerycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamchickpeacrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamchilipeppercrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcoffeebeancrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcorncrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcottoncrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcranberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamcucumbercrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pameggplantcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamelderberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamflaxcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamgarliccrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamgingercrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamgrapecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamgreengrapecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamhuckleberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamjicamacrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamjuniperberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamjutecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamkalecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamkenafcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamkiwicrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamkohlrabicrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamleekcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamlentilcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamlettucecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pammilletcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pammulberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pammustardseedscrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamoatscrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamokracrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamonioncrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamparsnipcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pampeanutcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pampeascrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pampineapplecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamquinoacrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamradishcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamraspberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamrhubarbcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamricecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamrutabagacrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamryecrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamscallioncrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamsesameseedscrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamsisalcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamsoybeancrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamspiceleafcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamspinachcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamstrawberrycrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamsweetpotatocrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamtarocrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamtealeafcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamtomatillocrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamtomatocrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamturnipcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamwaterchestnutcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamwhitemushroomcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamwintersquashcrop.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.pamzucchinicrop.get(), RenderType.cutout());
+		
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.aridgarden.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.frostgarden.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.tropicalgarden.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.windygarden.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.shadedgarden.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.soggygarden.get(), RenderType.cutout());
+
+}
+}
