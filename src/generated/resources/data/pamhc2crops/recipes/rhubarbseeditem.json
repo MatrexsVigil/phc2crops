@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "pamhc2crops:rhubarbitem"
+    }
+  ],
+  "result": {
+    "item": "pamhc2crops:rhubarbseeditem"
+  }
+}

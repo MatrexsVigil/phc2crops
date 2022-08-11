@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:protein/corn",
+    "#forge:protein/peanut",
+    "#forge:protein/quinoa",
+    "#forge:protein/rice",
+    "#forge:protein/spinach",
+    "#forge:protein/sweet_potato",
+    "#forge:protein/sweetpotato"
+  ]
+}

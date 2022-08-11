@@ -20,6 +20,8 @@ import javax.annotation.Nullable;
 
 public class BlockRegistry {
 
+	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Pamhc2crops.MOD_ID);
+
 	public static RegistryObject<Block> pamagavecrop;
 	public static RegistryObject<Block> pamamaranthcrop;
 	public static RegistryObject<Block> pamarrowrootcrop;
@@ -107,7 +109,6 @@ public class BlockRegistry {
 	public static RegistryObject<Block> soggygarden;
 	
 	public static void registerAll(IEventBus eventBus) {
-		DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Pamhc2crops.MOD_ID);
 
 			pamagavecrop = BLOCKS.register("pamagavecrop", () -> new BlockPamCrop(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0).sound(SoundType.CROP), "agave"));

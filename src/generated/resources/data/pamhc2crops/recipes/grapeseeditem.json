@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "pamhc2crops:grapeitem"
+    }
+  ],
+  "result": {
+    "item": "pamhc2crops:grapeseeditem"
+  }
+}

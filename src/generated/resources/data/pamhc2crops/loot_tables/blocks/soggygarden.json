@@ -1,0 +1,85 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "soggygarden",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:asparagusitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:blueberryitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:brusselsproutitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:cottonitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:cranberryitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:greengrapeitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:jicamaitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:kaleitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:milletitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:mulberryitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:okraitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:riceitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:spiceleafitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:tomatilloitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:waterchestnutitem"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:apply_bonus",
+          "enchantment": "minecraft:fortune",
+          "formula": "minecraft:uniform_bonus_count",
+          "parameters": {
+            "bonusMultiplier": 2
+          }
+        },
+        {
+          "function": "minecraft:explosion_decay"
+        }
+      ]
+    }
+  ]
+}
