@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "pamhc2crops:tealeafitem"
+    }
+  ],
+  "result": {
+    "item": "pamhc2crops:tealeafseeditem"
+  }
+}

@@ -12,15 +12,13 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import pam.pamhc2crops.config.Config;
 import pam.pamhc2crops.events.EventSetup;
-import pam.pamhc2crops.init.BlockRegistry;
-import pam.pamhc2crops.init.CompostRegistry;
-import pam.pamhc2crops.init.ItemRegistry;
-import pam.pamhc2crops.init.ModRenderers;
+import pam.pamhc2crops.init.*;
 import pam.pamhc2crops.worldgen.GardenGeneration;
 
 public class SideProxy {
 	SideProxy() {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		LootModifierRegistry.registerLootModifiers(eventBus);
 		ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.CONFIG, "pamhc2crops.toml");
 		eventBus.addListener(SideProxy::commonSetup);
 		eventBus.addListener(SideProxy::enqueueIMC);
@@ -65,7 +63,6 @@ public class SideProxy {
 
 		private static void clientSetup(FMLClientSetupEvent event) {
 			ModRenderers.registerBlocks();
-
 		}
 	}
 

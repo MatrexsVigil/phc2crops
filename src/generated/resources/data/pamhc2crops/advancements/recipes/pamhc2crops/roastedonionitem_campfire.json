@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pamhc2crops:roastedonionitem_campfire"
+    ]
+  },
+  "criteria": {
+    "has_crop": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pamhc2crops:onionitem"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "pamhc2crops:roastedonionitem_campfire"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_crop",
+      "has_the_recipe"
+    ]
+  ]
+}

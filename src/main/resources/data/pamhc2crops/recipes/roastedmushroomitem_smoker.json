@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:smoking",
-	"ingredient": {"tag": "forge:mushrooms"},
-	"result": "pamhc2crops:roastedmushroomitem",
-	"experience": 0.35,
-	"cookingtime": 100
-
-}

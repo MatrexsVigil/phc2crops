@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pamhc2crops:flaxseeditem"
+    ]
+  },
+  "criteria": {
+    "has_crop": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pamhc2crops:flaxitem"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "pamhc2crops:flaxseeditem"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_crop",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "pamhc2crops:block/grape_stage_3"
+  }
+}

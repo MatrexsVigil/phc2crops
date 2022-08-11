@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:paper_x2_paper_plants"
+    ]
+  },
+  "criteria": {
+    "has_crop": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:paper_plants"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:paper_x2_paper_plants"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_crop",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "pamhc2crops:block/chickpea_stage_0"
+  }
+}

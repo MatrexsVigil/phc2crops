@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "pamhc2crops:block/brusselsprout_stage_0"
+  }
+}

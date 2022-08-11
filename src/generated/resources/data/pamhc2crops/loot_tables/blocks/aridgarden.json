@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "aridgarden",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:agaveitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cactus"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:cactusfruititem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:cassavaitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:chickpeaitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:lentilitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:sisalitem"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:apply_bonus",
+          "enchantment": "minecraft:fortune",
+          "formula": "minecraft:uniform_bonus_count",
+          "parameters": {
+            "bonusMultiplier": 2
+          }
+        },
+        {
+          "function": "minecraft:explosion_decay"
+        }
+      ]
+    }
+  ]
+}

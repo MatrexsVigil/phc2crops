@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "pamhc2crops:block/parsnip_stage_1"
+  }
+}

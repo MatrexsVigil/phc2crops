@@ -1,0 +1,85 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "frostgarden",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:broccoliitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:cabbageitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:caulifloweritem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:celeryitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:cottonitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:huckleberryitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:juniperberryitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:kohlrabiitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:oatsitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:peasitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:quinoaitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:raspberryitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:rutabagaitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:ryeitem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pamhc2crops:spinachitem"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:apply_bonus",
+          "enchantment": "minecraft:fortune",
+          "formula": "minecraft:uniform_bonus_count",
+          "parameters": {
+            "bonusMultiplier": 2
+          }
+        },
+        {
+          "function": "minecraft:explosion_decay"
+        }
+      ]
+    }
+  ]
+}
