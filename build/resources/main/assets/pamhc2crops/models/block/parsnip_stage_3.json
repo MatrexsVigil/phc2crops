@@ -1,6 +1,0 @@
-{
-    "parent": "block/crop",
-    "textures": {
-        "crop": "pamhc2crops:block/parsnip_stage_3"
-    }
-}

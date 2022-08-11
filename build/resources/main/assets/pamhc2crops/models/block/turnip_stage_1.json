@@ -1,7 +1,0 @@
-{
-    "parent": "block/crop",
-    "textures": {
-        "crop": "pamhc2crops:block/turnip_stage_1"
-    }
-}
-
