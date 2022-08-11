@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: pamhc2crops
+Specification-Vendor: pam
+Specification-Version: 1
+Implementation-Title: phc2crops-1.18.2
+Implementation-Version: 1.0.0-datagen-test
+Implementation-Vendor: pam
+Implementation-Timestamp: 2022-08-10T22:15:10-0500
+
